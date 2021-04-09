@@ -12,7 +12,7 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  position: relative;
+  position: absolute;
   top: 2em;
   right: 0;
 }
@@ -115,6 +115,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 95%;
+  position: relative;
   margin: 2rem auto;
   padding: 0;
   overflow-x: hidden;
