@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+	<style>
+
+p {
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background: aqua;
+    padding: 1em;  
+}
+
+.text::before,
+.text::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  float: left;
+  
+  shape-outside: radial-gradient(
+      farthest-side at 100%,
+      transparent 99%,
+      green);
+}
+.text::after{
+    shape-outside: radial-gradient(
+      farthest-side at 00%,
+      transparent 99%,
+      green);
+    float: right;
+}
+
+
+
+
+    </style>
+    </head>
+	<body tabIndex=0>
+        <p>
+              <span class='text'></span>
+              Experience design is the design of anything, independent of medium, or across media, with human experience as an
+            explicit outcome, and human engagement as an explicit goal.</p>
+    
+    </body>
+</html>
