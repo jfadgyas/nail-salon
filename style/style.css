@@ -165,8 +165,9 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 76vh;
-  width: 55%;
+  width: 65%;
   padding: 1em;
+  background: #a9adac;
 }
 
 .hero--right {
@@ -202,7 +203,7 @@ body {
 .hero__text {
   padding-top: 2.5em;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.5;
   color: #a01fdb;
 }
