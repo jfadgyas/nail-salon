@@ -1,5 +1,6 @@
+@import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&display=swap');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css");
+
 
 .hamburger{
     display: flex;
@@ -7,12 +8,12 @@
     align-items: flex-end;
     position: absolute;
     top: 2em;
-    right: 0;
+    left: 0;
     // background: red;
     &::before{
         content: '\f550';
-        padding-right: 1em;
-        color: #B22CDB;
+        padding-left: 1em;
+        color: $text-color;//#B22CDB;
         font-style: normal;
         font-variant: normal;
         text-rendering: auto;
@@ -28,14 +29,15 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+    padding: 0;
     position: absolute;
     top: 4.5em;
-    right: 0;
+    left: 0;
     &__item{
         position: relative;
         // width: 180px;
-        right: -150px;
+        left: -150px;
         padding: 0.5em;
         box-sizing: border-box;
         border-bottom: 1px solid transparent;
@@ -44,7 +46,7 @@
         background-position: right;
         transition: 500ms;
         &:hover{
-            border-bottom: 1px solid #B22CDB;
+            border-bottom: 1px solid $text-color;
             background-position: left;
         }
         // &:last-child{
@@ -53,13 +55,13 @@
         // }
     }
     &__link{
-        font-family: 'Cinzel', serif;
-        font-weight: 600;
+        font-family: 'Bodoni Moda', serif;
+        font-weight: 400;
         text-transform: uppercase;
         text-decoration: none;
-        color: #B22CDB;
+        color: $text-color;
         &:visited{
-            color: #B22CDB;
+            color: $text-color;
         }
         &:active{
             color: #666;
@@ -71,7 +73,7 @@
         transform: rotateZ(90deg);
     }
     .menu__item{
-        right: 0;
+        left: 0;
     }
 }
 

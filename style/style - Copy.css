@@ -96,8 +96,12 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0)), to(white)), url("../tmp/stacks_image_468.0.0.0.0.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, white), url("../tmp/stacks_image_468.0.0.0.0.jpg");
+  background-position: 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
@@ -106,57 +110,64 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.hero--left {
-  width: 50vw;
-  background: url("../tmp/bg-new.jpg");
-  background-position: 75%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.hero--right {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50vw;
-  background: black;
+}
+
+.hero--left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 76vh;
+  width: 65%;
+  padding: 1em;
+}
+
+.hero--right {
+  margin-top: 30vh;
 }
 
 .hero__logo {
-  width: 100%;
+  width: 250px;
   height: 50px;
   text-align: center;
-  background: lime;
+}
+
+.hero__img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  right: -5em;
 }
 
 .hero__title {
   margin: 0;
-  font-family: 'Berkshire Swash', cursive;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  color: #f7e6e6;
+  font-family: 'Cinzel', serif;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #f7d8d8;
 }
 
-.hero__title--sub {
-  text-transform: unset;
-  font-style: italic;
+.hero__text {
+  padding-top: 2em;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #a30707;
 }
 
-.hero__motto {
-  width: 70%;
-  padding-top: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 9px;
-  color: #f7e6e6;
+.hero__text--last {
+  letter-spacing: 0.3em;
+  font-family: 'Cinzel', serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #E332F0;
 }
 
 .hero__btn {
@@ -260,4 +271,4 @@ body {
     width: 80%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style - Copy.css.map */

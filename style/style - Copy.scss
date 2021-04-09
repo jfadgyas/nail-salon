@@ -2,13 +2,11 @@
 
 
 body{
-    margin: 0;
-    padding: 0;
-    // height: 100vh;
-    // background-image: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1)), url('../tmp/stacks_image_468.0.0.0.0.jpg');
-    // background-position: 25%;
-    // background-repeat: no-repeat;
-    // background-size: cover;//200% 100vh;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1)), url('../tmp/stacks_image_468.0.0.0.0.jpg');
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;//200% 100vh;
     // background: linear-gradient(to bottom right, #00eeff, #00ff88);
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -50,47 +48,59 @@ body{
 
 .hero{
     display: flex;
-    margin-top: 0;
-    padding-top: 0;
+    flex-direction: column;
     &--left{
-        width: 50vw;
-        background: url('../tmp/bg-new.jpg');
-        background-position: 75%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        // position: relative;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 76vh;
+        width: 65%;
+        padding: 1em;
+        // background: rgb(169, 173, 172);
     }
     &--right{
-        flex-direction: column;
-        align-items: center;
-        width: 50vw;
-        background: black;
+        margin-top: 30vh;
+        // position: relative;
     }
     &__logo{
-        width: 100%;
+        width: 250px;
         height: 50px;
         text-align: center;
-        background: lime;
+        // background: lime;
+    }
+    &__img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        right: -5em;
     }
     &__title{
         margin: 0;
-        font-family: 'Berkshire Swash', cursive;
-        font-size: 1.8em;
-        text-transform: uppercase;
-        color: $text-color;//rgb(233, 220, 220);
-        &--sub{
-            text-transform: unset;
-            font-style: italic;
+        font-family: 'Cinzel', serif;
+        font-size: 2.5em;
+        font-weight: 900;
+        color: rgb(247, 216, 216);//rgb(233, 220, 220);
         }
-        }
-    &__motto{
-        width: 70%;
-        padding-top: 1.5em;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 9px;
-        color: $text-color;//rgb(247, 216, 216);//rgb(233, 220, 220);
-    }
+    &__text{
 
+        // width: 100%;
+        // height: 100%;
+        // margin: 0;
+        // padding: 0;
+        padding-top: 2em;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 1.5;
+        color: rgb(163, 7, 7);//rgb(247, 216, 216);//rgb(233, 220, 220);
+        &--last{
+            letter-spacing: 0.3em;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #E332F0;//rgb(160, 31, 219);
+        }
+    }
     &__btn{
         // width: 220px;
         // height: 180px;
@@ -118,6 +128,10 @@ body{
             background-position: right;   
         }
     }
+    // &__galery{
+    //     width: 100%;
+    //     height: 100%;
+    // }
     // &__scroll{
     //     //icons
     //     font-style: normal;
