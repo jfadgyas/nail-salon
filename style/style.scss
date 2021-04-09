@@ -50,8 +50,6 @@ body{
 
 .hero{
     display: flex;
-    margin-top: 0;
-    padding-top: 0;
     &--left{
         width: 50vw;
         background: url('../tmp/bg-new.jpg');
@@ -73,7 +71,7 @@ body{
     }
     &__title{
         margin: 0;
-        font-family: 'Berkshire Swash', cursive;
+        font-family: 'Bodoni Moda', serif;
         font-size: 1.8em;
         text-transform: uppercase;
         color: $text-color;//rgb(233, 220, 220);
@@ -81,14 +79,20 @@ body{
             text-transform: unset;
             font-style: italic;
         }
-        }
-    &__motto{
-        width: 70%;
+    }
+    &__text{
         padding-top: 1.5em;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 9px;
+        font-size: 10px;
         color: $text-color;//rgb(247, 216, 216);//rgb(233, 220, 220);
+        &--motto{
+            width: 70%;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    &__desc-container{
+        // background: aquamarine;
     }
 
     &__btn{

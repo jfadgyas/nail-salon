@@ -14,7 +14,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   position: absolute;
-  top: 2em;
+  top: 1em;
   left: 0;
 }
 
@@ -47,7 +47,7 @@
           align-items: flex-start;
   padding: 0;
   position: absolute;
-  top: 4.5em;
+  top: 2.5em;
   left: 0;
 }
 
@@ -106,8 +106,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0;
-  padding-top: 0;
 }
 
 .hero--left {
@@ -139,7 +137,7 @@ body {
 
 .hero__title {
   margin: 0;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Bodoni Moda', serif;
   font-size: 1.8em;
   text-transform: uppercase;
   color: #f7e6e6;
@@ -150,13 +148,16 @@ body {
   font-style: italic;
 }
 
-.hero__motto {
-  width: 70%;
+.hero__text {
   padding-top: 1.5em;
+  font-size: 10px;
+  color: #f7e6e6;
+}
+
+.hero__text--motto {
+  width: 70%;
   text-transform: uppercase;
   text-align: center;
-  font-size: 9px;
-  color: #f7e6e6;
 }
 
 .hero__btn {
