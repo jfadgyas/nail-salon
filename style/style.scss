@@ -58,7 +58,7 @@ body{
         height: 76vh;
         width: 65%;
         padding: 1em;
-        background: rgb(169, 173, 172);
+        // background: rgb(169, 173, 172);
     }
     &--right{
         margin-top: 30vh;
@@ -91,9 +91,9 @@ body{
         // height: 100%;
         // margin: 0;
         // padding: 0;
-        padding-top: 2.5em;
+        padding-top: 2em;
         text-transform: uppercase;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 1.5;
         color: rgb(160, 31, 219);//rgb(247, 216, 216);//rgb(233, 220, 220);
         &--last{
