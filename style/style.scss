@@ -65,7 +65,7 @@ body{
     }
     &__logo{
         width: 100%;
-        height: 50px;
+        height: 3.5em;
         text-align: center;
         background: lime;
     }
@@ -92,8 +92,18 @@ body{
     }
 
     &__desc-container{
-        // background: aquamarine;
+        flex-direction: column;
+        align-items: center;
     }
+
+    &__desc__photo{
+        width: 100px;
+        height: 100px;
+        border: 2px solid white;
+        border-radius: 50%;
+        // transform: translateY(-50%);
+    }
+
 
     &__btn{
         // width: 220px;
@@ -122,6 +132,7 @@ body{
             background-position: right;   
         }
     }
+
     // &__scroll{
     //     //icons
     //     font-style: normal;
@@ -149,6 +160,68 @@ body{
     // }
 }
 
+.social-media{
+    display: inline-block;
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    padding: 0.5em;
+    color: $text-color;
+    border: 1px solid $text-color; //rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Brands";
+    font-size: 14px;
+    text-align: center;
+    transition: 500ms;
+    &--fb{
+        &::before{
+            content: '\f39e';
+        }
+        &:hover{
+            background-color: #3b5998;
+            color: white;
+        }
+    }        
+    &--insta{
+        &::before{
+            content: '\f16d';
+        }
+        &:hover{
+            background-color: #8a3ab9;
+            color: white;
+        }
+    }
+    &--twitter{
+        &::before{
+            content: '\f099';
+        }
+        &:hover{
+            background-color: #00acee;
+            color: white;
+        }
+    }
+}
+
+.social{
+    padding: 1em;
+    // text-decoration: none;
+    // text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    display: inline-block;
+    border-radius: 25px;
+    
+    // &:hover{
+    //     cursor: pointer;
+    //     background-color: $textColor;
+    //     border-color: $textColor;
+    // }
+    
+}
 
 .feature{
     justify-content: center; //for flex on the page

@@ -19,6 +19,7 @@
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         font-family: "Font Awesome 5 Free";
+        font-size: 20px;
         font-weight: 900;
         cursor: pointer;
         transition: 500ms;
@@ -29,21 +30,26 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: 50vw;
+    height: 90vh; //max page width
     padding: 0;
     position: absolute;
     top: 2.5em;
-    left: 0;
+    left: -50vw;
+    transition: 500ms;
+    background: rgba(0, 0, 0, 0.7);
     &__item{
         position: relative;
-        // width: 180px;
-        left: -150px;
+        // width: 50vw;
+        // left: -150px;
         padding: 0.5em;
         box-sizing: border-box;
         border-bottom: 1px solid transparent;
         background: radial-gradient(closest-side at 30% 50%, rgba(255,255,255,0.3), rgba(255,255,255,0));
         background-size: 300%;
         background-position: right;
+        font-size: 18px;
         transition: 500ms;
         &:hover{
             border-bottom: 1px solid $text-color;
@@ -72,8 +78,9 @@
     &::before{
         transform: rotateZ(90deg);
     }
-    .menu__item{
-        left: 0;
-    }
+    left: 0;
+    // .menu__item{
+    //     left: 0;
+    // }
 }
 

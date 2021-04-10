@@ -27,6 +27,7 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
+  font-size: 20px;
   font-weight: 900;
   cursor: pointer;
   -webkit-transition: 500ms;
@@ -42,18 +43,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vw;
+  height: 90vh;
   padding: 0;
   position: absolute;
   top: 2.5em;
-  left: 0;
+  left: -50vw;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .menu__item {
   position: relative;
-  left: -150px;
   padding: 0.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -61,6 +66,7 @@
   background: radial-gradient(closest-side at 30% 50%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   background-size: 300%;
   background-position: right;
+  font-size: 18px;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -86,13 +92,13 @@
   color: #666;
 }
 
+.open {
+  left: 0;
+}
+
 .open::before {
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-}
-
-.open .menu__item {
-  left: 0;
 }
 
 body {
@@ -130,7 +136,7 @@ body {
 
 .hero__logo {
   width: 100%;
-  height: 50px;
+  height: 3.5em;
   text-align: center;
   background: lime;
 }
@@ -160,6 +166,23 @@ body {
   text-align: center;
 }
 
+.hero__desc-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__desc__photo {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
 .hero__btn {
   padding: 0.5em;
   -webkit-box-shadow: 0 5px 5px rgba(160, 31, 219, 0.5);
@@ -187,6 +210,61 @@ body {
 
 .hero__btn:hover {
   background-position: right;
+}
+
+.social-media {
+  display: inline-block;
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+  padding: 0.5em;
+  color: #f7e6e6;
+  border: 1px solid #f7e6e6;
+  border-radius: 50%;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Brands";
+  font-size: 14px;
+  text-align: center;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.social-media--fb::before {
+  content: '\f39e';
+}
+
+.social-media--fb:hover {
+  background-color: #3b5998;
+  color: white;
+}
+
+.social-media--insta::before {
+  content: '\f16d';
+}
+
+.social-media--insta:hover {
+  background-color: #8a3ab9;
+  color: white;
+}
+
+.social-media--twitter::before {
+  content: '\f099';
+}
+
+.social-media--twitter:hover {
+  background-color: #00acee;
+  color: white;
+}
+
+.social {
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 25px;
 }
 
 .feature {
