@@ -98,6 +98,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  color: #f7e6e6;
 }
 
 main {
@@ -198,6 +199,16 @@ main {
   width: 70%;
   text-transform: uppercase;
   text-align: center;
+}
+
+.hero__text--price-list,
+.about__text--price-list,
+.prices__text--price-list,
+.product__text--price-list,
+.contact__text--price-list {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 .hero__desc-container,
@@ -375,7 +386,7 @@ main {
 }
 
 .icons--address::before {
-  content: '\e065';
+  content: '\f3c5';
 }
 
 .icons--tel::before {
@@ -388,72 +399,5 @@ main {
 
 .icons--msg::before {
   content: '\f0e0';
-}
-
-.feature {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 80%;
-      grid-template-columns: 80%;
-  grid-gap: 1em;
-  text-align: center;
-}
-
-.feature__cards {
-  margin: 2em 0;
-  border-top-width: 6px;
-  border-top-style: solid;
-}
-
-.feature__cards:nth-child(1) {
-  border-top-color: #f79f89;
-  color: #f79f89;
-}
-
-.feature__cards:nth-child(1) :is(button) {
-  background-color: #f79f89;
-}
-
-.feature__cards:nth-child(2) {
-  border-top-color: #a01fdb;
-  color: #a01fdb;
-}
-
-.feature__cards:nth-child(2) :is(button) {
-  background-color: #a01fdb;
-}
-
-.feature__cards:nth-child(3) {
-  border-top-color: #fd4bb3;
-  color: #fd4bb3;
-}
-
-.feature__cards:nth-child(3) :is(button) {
-  background-color: #fd4bb3;
-}
-
-.feature__title {
-  text-transform: uppercase;
-}
-
-.feature__desc {
-  color: #756d6d;
-}
-
-.feature__btn {
-  text-transform: uppercase;
-  text-align: center;
-  color: #ece2df;
-  border: none;
-  border-radius: 3px;
-  padding: 0.5em 1em;
-}
-
-.feature__img {
-  width: 100%;
-  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */

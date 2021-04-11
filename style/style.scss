@@ -11,6 +11,7 @@ body{
     // background-size: cover;//200% 100vh;
     // background: linear-gradient(to bottom right, #00eeff, #00ff88);
     font-family: 'Montserrat', sans-serif;
+    color: $text-color;
     // overflow-x: hidden;
 }
 
@@ -89,6 +90,7 @@ main{
         }
     }
     &__text{
+        // margin: 0; ???
         padding: 0.5em;
         padding-top: 1.5em;
         font-size: 10px;
@@ -97,6 +99,11 @@ main{
             width: 70%;
             text-transform: uppercase;
             text-align: center;
+        }
+        &--price-list{
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
         }
     }
 
@@ -113,7 +120,10 @@ main{
         // transform: translateY(-50%);
     }
 
-
+    &__cards{
+        // display: flex;
+        // flex-direction: column;
+    }
     &__btn{
         // width: 220px;
         // height: 180px;
@@ -268,7 +278,7 @@ main{
     text-align: center;
     &--address{
         &::before{
-            content: '\e065';
+            content: '\f3c5';//'\e065';
         }
     }
     &--tel{
@@ -288,54 +298,54 @@ main{
     }
 }
 
-.feature{
-    justify-content: center; //for flex on the page
-    display: grid;
-    grid-template-columns: 80%;
-    grid-gap: 1em;
-    text-align: center;
-    &__cards{
-        margin: 2em 0;
-        border-top-width: 6px;
-        border-top-style: solid;
-        &:nth-child(1){
-            border-top-color: #f79f89;
-            color: #f79f89;
-            & :is(button){
-                background-color: #f79f89;
-            }
-        }
-        &:nth-child(2){
-            border-top-color: #a01fdb;
-            color: #a01fdb;
-            & :is(button){
-                background-color: #a01fdb;
-            }
-        }
-        &:nth-child(3){
-            border-top-color: #fd4bb3;//#f52664;
-            color: #fd4bb3;
-            & :is(button){
-                background-color: #fd4bb3;
-            }
-        }
-    }
-    &__title{
-        text-transform: uppercase;
-    }
-    &__desc{
-        color:rgb(117, 109, 109);
-    }
-    &__btn{
-        text-transform: uppercase;
-        text-align: center;
-        color: #ece2df;
-        border: none;
-        border-radius: 3px;
-        padding: 0.5em 1em;
-    }
-    &__img{
-        width: 100%;
-        height: 200px;
-    }
-}
+// .feature{
+//     justify-content: center; //for flex on the page
+//     display: grid;
+//     grid-template-columns: 80%;
+//     grid-gap: 1em;
+//     text-align: center;
+//     &__cards{
+//         margin: 2em 0;
+//         border-top-width: 6px;
+//         border-top-style: solid;
+//         &:nth-child(1){
+//             border-top-color: #f79f89;
+//             color: #f79f89;
+//             & :is(button){
+//                 background-color: #f79f89;
+//             }
+//         }
+//         &:nth-child(2){
+//             border-top-color: #a01fdb;
+//             color: #a01fdb;
+//             & :is(button){
+//                 background-color: #a01fdb;
+//             }
+//         }
+//         &:nth-child(3){
+//             border-top-color: #fd4bb3;//#f52664;
+//             color: #fd4bb3;
+//             & :is(button){
+//                 background-color: #fd4bb3;
+//             }
+//         }
+//     }
+//     &__title{
+//         text-transform: uppercase;
+//     }
+//     &__desc{
+//         color:rgb(117, 109, 109);
+//     }
+//     &__btn{
+//         text-transform: uppercase;
+//         text-align: center;
+//         color: #ece2df;
+//         border: none;
+//         border-radius: 3px;
+//         padding: 0.5em 1em;
+//     }
+//     &__img{
+//         width: 100%;
+//         height: 200px;
+//     }
+// }
