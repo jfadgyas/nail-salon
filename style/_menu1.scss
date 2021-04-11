@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&display=swap');
 
 .hamburger{
-    position: absolute;
+    position: fixed;//absolute;
     top: 1em;
     left: 0;
     z-index: 1;
@@ -32,7 +32,7 @@
     height: 100%; //max page height
     padding: 0;
     padding-top: 3.5em;
-    position: absolute;
+    position: fixed;//absolute;
     top: -1em;//2.5em;
     left: -50vw;
     transition: 500ms;
@@ -53,10 +53,6 @@
             border-bottom: 1px solid $text-color;
             background-position: left;
         }
-        // &:last-child{
-        //     background: red;
-        //     align-items: flex-end;
-        // }
     }
     &__link{
         font-family: 'Bodoni Moda', serif;

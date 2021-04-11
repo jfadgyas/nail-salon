@@ -11,7 +11,12 @@ body{
     // background-size: cover;//200% 100vh;
     // background: linear-gradient(to bottom right, #00eeff, #00ff88);
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
 }
 // .glass__background{
 //     display: flex;
@@ -48,16 +53,20 @@ body{
 //     filter: blur(0.2em);  
 // }
 
-.hero{
+.hero,
+.about,
+.prices,
+.product,
+.contact{
     display: flex;
-    &--left{
+    &__left{
         width: 50vw;
         background: url('../tmp/bg-new.jpg');
-        background-position: 75%;
+        background-position: 75%;    
         background-size: cover;
         background-repeat: no-repeat;
     }
-    &--right{
+    &__right{
         flex-direction: column;
         align-items: center;
         width: 50vw;
@@ -80,6 +89,7 @@ body{
         }
     }
     &__text{
+        padding: 0.5em;
         padding-top: 1.5em;
         font-size: 10px;
         color: $text-color;//rgb(247, 216, 216);//rgb(233, 220, 220);
@@ -108,7 +118,7 @@ body{
         // width: 220px;
         // height: 180px;
         padding: 0.5em;
-        box-shadow: 1px 2px 3px rgba(247, 230, 230, $text-opacity--end);
+        // box-shadow: 1px 2px 3px rgba(247, 230, 230, $text-opacity--end);
         background: linear-gradient(to right bottom, rgba(255,255,255, 0.1) 50%, rgba(247, 230, 230, $text-opacity--end));
         background-position: left;
         background-size: 200%;
@@ -123,13 +133,39 @@ body{
         border-bottom-color: rgba(184, 169, 169, 0.233);
         border-radius: 3px;
         font-size: 14px;
+        text-transform: uppercase;
         text-shadow: 0px 0px 2px rgba(247, 230, 230, $text-opacity--start);;
-        color: rgba(247, 230, 230, $text-opacity--end);
+        color: rgba(247, 230, 230, 0.6);
         cursor: pointer;
         transition: 500ms;
         &:hover{
             background-position: right;   
         }
+    }
+
+    .about__left{
+        background: url('../tmp/8ayoy5lwqy151.jpg');
+        background-position: 40%;    
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .prices__left{
+        background: url('../tmp/unnamed.jpg');
+        background-position: 40%;    
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .product__left{
+        background: url('../tmp/la-roche-posay-silicium-n24-rouge-parfait-7ml.jpg');
+        background-position: 40%;    
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .contact__left{
+        background: url('../tmp/1b032032b3941f54cd4db86bb4751206.jpg');
+        background-position: 40%;    
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     // &__scroll{
@@ -165,8 +201,11 @@ body{
     width: 15px;
     height: 15px;
     padding: 0.5em;
+    background: 
+        linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0)),
+        linear-gradient(-10deg, rgba(0,0,0,0), rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.3), rgba(255,255,255,0.1)); 
     color: $text-color;
-    border: 1px solid $text-color; //rgba(128, 128, 128, 0.3);
+    border: 1px solid rgba(247, 230, 230, $text-opacity--end);; //rgba(128, 128, 128, 0.3);
     border-radius: 50%;
     font-style: normal;
     font-variant: normal;
@@ -175,13 +214,15 @@ body{
     font-family: "Font Awesome 5 Brands";
     font-size: 14px;
     text-align: center;
+    cursor: pointer;
     transition: 500ms;
     &--fb{
         &::before{
             content: '\f39e';
         }
         &:hover{
-            background-color: #3b5998;
+            // background: none;
+            background: #3b5998;
             color: white;
         }
     }        
@@ -190,7 +231,7 @@ body{
             content: '\f16d';
         }
         &:hover{
-            background-color: #8a3ab9;
+            background: #8a3ab9;
             color: white;
         }
     }
@@ -199,27 +240,52 @@ body{
             content: '\f099';
         }
         &:hover{
-            background-color: #00acee;
+            background: #00acee;
             color: white;
         }
     }
 }
 
-.social{
-    padding: 1em;
-    // text-decoration: none;
-    // text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
+.icons{
     display: inline-block;
-    border-radius: 25px;
-    
-    // &:hover{
-    //     cursor: pointer;
-    //     background-color: $textColor;
-    //     border-color: $textColor;
-    // }
-    
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    padding: 0.5em;
+    background: 
+        linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0)),
+        linear-gradient(-10deg, rgba(0,0,0,0), rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.3), rgba(255,255,255,0.1)); 
+    color: $text-color;
+    border: 1px solid rgba(247, 230, 230, $text-opacity--end);; //rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    &--address{
+        &::before{
+            content: '\e065';
+        }
+    }
+    &--tel{
+        &::before{
+            content: '\f879';
+        }
+    }
+    &--email{
+        &::before{
+            content: '\f1fa';
+        }
+    }
+    &--msg{
+        &::before{
+            content: '\f0e0';
+        }
+    }
 }
 
 .feature{
@@ -271,14 +337,5 @@ body{
     &__img{
         width: 100%;
         height: 200px;
-    }
-}
-
-.contact{
-}
-
-@media screen and (min-width: 648px){
-    .glass__background{
-        width: 80%;
     }
 }
