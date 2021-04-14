@@ -60,12 +60,13 @@ const getCalendar = (selectedYear, selectedMonth) => {
     days.map(item => {
         const dayHead = document.createElement('p')
         dayHead.innerHTML = item
-        dayHead.classList.add('calendar__head--days')
+        dayHead.classList.add('calendar__days--head')
         calendarDays.appendChild(dayHead)
     })
 
     for (let i = 1-dayOffset; i <= daysOfMonth; i++){
         const dayNode = document.createElement('p')
+        dayNode.classList.add('calendar__days--day')
         if (i > 0 ){
             let day = new Date(selectedYear, selectedMonth, i).toDateString()
             dayNode.id = i

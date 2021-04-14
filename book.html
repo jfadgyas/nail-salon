@@ -28,23 +28,45 @@
 				<div class='hero hero__left'>
 				</div>
 				<div class='hero hero__right'>
-					<img class='hero__logo' src='tmp/logo_01.png' alt='logo'/>
-					<h1 class='hero__title'>Emmie's</h1>
-					<h2 class='hero__title hero__title--sub'>BeautyCare</h2>
-					<p class='hero__text hero__text--motto'>because your beauty worth my time</p>
+					
+					<!--
+						<h1 class='hero__title'>Emmie's</h1>
+						<h2 class='hero__title hero__title--sub'>BeautyCare</h2>
+						<p class='hero__text hero__text--motto'>because your beauty worth my time</p>
+					-->
 				
-					<div id='calendar' class='calendar'>
-						<div class='calendar__head'>
-							<button id='month-prev'>&#8592;</button>
-							<div id='month' class='month'></div>
-							<button id='month-next'>&#8594;</button>
-							<div></div>
-							<button id='year-prev'>&#8592;</button>
-							<div id='year' class='year'></div>
-							<button id='year-next'>&#8594;</button>
+					<form class='booking-new' novalidate name='booking-new' action='#'>
+						<img class='hero__logo' src='tmp/logo_01.png' alt='logo'/>
+						<div id='calendar' class='calendar'>
+							<div class='calendar__head'>
+								<button id='month-prev' class='calendar__head__btn calendar__head__btn--prev'></button>
+								<div id='month' class='calendar__head__month'></div>
+								<button id='month-next' class='calendar__head__btn calendar__head__btn--next'></button>
+								<div></div>
+								<button id='year-prev' class='calendar__head__btn calendar__head__btn--prev'></button>
+								<div id='year' class='calendar__head__year'></div>
+								<button id='year-next' class='calendar__head__btn calendar__head__btn--next'></button>
+							</div>
+							<div id='days' class='calendar__days'></div>
 						</div>
-						<div id='days' class='calendar__days'></div>
-					</div>
+					
+						<select class='time' size='5'>
+							<option value='1'>17:00</option>
+							<option value='2'>17:15</option>
+							<option value='3'>17:30</option>
+							<option value='4'>17:45</option>
+							<option value='5'>18:00</option>
+							<option value='6'>18:15</option>
+						</select>
+						<select class='treat' size='5'>
+							<option>manicure</option>
+							<option>repair</option>
+							<option>Aprt</option>
+						</select>
+
+						<button class='hero__btn'>BOOK</button>
+					</form>
+			
 
 				</div>
 			</article>
@@ -54,19 +76,7 @@
 			
 
 
-			<form novalidate name='' action='#'>
-				<select class='time'>
-					<option value=''>Choose time</option>
-				</select>
-				<select>
-					<option>manicure</option>
-					<option>repair</option>
-					<option>art</option>
-				</select>
-
-			</form>
 			
-			<button class='hero__btn'>BOOK</button>
 
         </main>
 		<footer>

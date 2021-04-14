@@ -6,7 +6,7 @@
   position: fixed;
   top: 1em;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hamburger::before {
@@ -48,6 +48,7 @@
   -webkit-transition: 500ms;
   transition: 500ms;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 .menu__item {
