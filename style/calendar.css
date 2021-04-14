@@ -89,4 +89,16 @@
   letter-spacing: 2px;
   text-align: justify;
 }
+
+option:nth-child(1) {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+option:nth-child(2) {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+option:nth-child(3) {
+  color: rgba(255, 255, 255, 0.7);
+}
 /*# sourceMappingURL=calendar.css.map */
