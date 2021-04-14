@@ -187,7 +187,6 @@ main {
 .contact__text {
   padding: 0.5em;
   padding-top: 1.5em;
-  font-size: 10px;
   color: #f7e6e6;
 }
 
@@ -196,7 +195,9 @@ main {
 .prices__text--motto,
 .product__text--motto,
 .contact__text--motto {
-  width: 70%;
+  margin: 0;
+  padding: 0 1em;
+  font-size: 10px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -207,7 +208,9 @@ main {
 .product__text--price-list,
 .contact__text--price-list {
   margin: 0;
-  padding: 0;
+  padding: 0.5em;
+  padding-bottom: 0;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -230,10 +233,22 @@ main {
 .prices__desc__photo,
 .product__desc__photo,
 .contact__desc__photo {
+  margin: 1em;
   width: 100px;
   height: 100px;
   border: 2px solid white;
   border-radius: 50%;
+}
+
+.hero__cards,
+.about__cards,
+.prices__cards,
+.product__cards,
+.contact__cards {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .hero__btn,
@@ -386,7 +401,7 @@ main {
 }
 
 .icons--address::before {
-  content: '\f3c5';
+  content: '\e065';
 }
 
 .icons--tel::before {
@@ -399,5 +414,9 @@ main {
 
 .icons--msg::before {
   content: '\f0e0';
+}
+
+.divider {
+  width: 80%;
 }
 /*# sourceMappingURL=style.css.map */

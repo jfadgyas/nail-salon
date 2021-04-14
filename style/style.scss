@@ -93,16 +93,20 @@ main{
         // margin: 0; ???
         padding: 0.5em;
         padding-top: 1.5em;
-        font-size: 10px;
         color: $text-color;//rgb(247, 216, 216);//rgb(233, 220, 220);
         &--motto{
-            width: 70%;
+            margin: 0;
+            padding: 0 1em;
+            // width: 70%;
+            font-size: 10px;
             text-transform: uppercase;
             text-align: center;
         }
         &--price-list{
             margin: 0;
-            padding: 0;
+            padding: 0.5em;
+            padding-bottom: 0;
+            font-size: 13px;
             text-transform: uppercase;
         }
     }
@@ -113,6 +117,7 @@ main{
     }
 
     &__desc__photo{
+        margin: 1em;
         width: 100px;
         height: 100px;
         border: 2px solid white;
@@ -121,9 +126,13 @@ main{
     }
 
     &__cards{
-        // display: flex;
-        // flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        // background: aquamarine;
     }
+
     &__btn{
         // width: 220px;
         // height: 180px;
@@ -278,7 +287,7 @@ main{
     text-align: center;
     &--address{
         &::before{
-            content: '\f3c5';//'\e065';
+            content: '\e065';
         }
     }
     &--tel{
@@ -298,6 +307,9 @@ main{
     }
 }
 
+.divider{
+    width: 80%;
+}
 // .feature{
 //     justify-content: center; //for flex on the page
 //     display: grid;

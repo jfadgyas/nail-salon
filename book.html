@@ -3,7 +3,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
 		<title>what?</title>
 		<link rel="stylesheet" type='text/css' href="./style/style.css">
+		<link rel="stylesheet" type='text/css' href="./style/calendar.css">
 		<script defer type='application/javascript' src='./script/menu.js'></script>
+		<script defer type='application/javascript' src='./script/book.js'></script>
 	</head>
 	<body tabIndex=0>
 		<header class='header'>
@@ -23,34 +25,55 @@
 		<main>
 			<!--Hero section-->
 			<article class='hero'>
-				<div class='hero hero--left'>
+				<div class='hero hero__left'>
 				</div>
-				<div class='hero hero--right'>
+				<div class='hero hero__right'>
 					<img class='hero__logo' src='tmp/logo_01.png' alt='logo'/>
 					<h1 class='hero__title'>Emmie's</h1>
 					<h2 class='hero__title hero__title--sub'>BeautyCare</h2>
 					<p class='hero__text hero__text--motto'>because your beauty worth my time</p>
-					
-					<form novalidate name='' action='#'>
-						<div class='calendar'></div>
-						<div class='time'></div>
-						<select>
-							<option>manicure</option>
-							<option>repair</option>
-							<option>art</option>
-						</select>
-
-					</form>
-					
-					<button class='hero__btn'>BOOK</button>
-					<div>
-						<h3 class='hero__text hero__text--motto'>emmiesbeautycare</h3>
-						<div class='social-media social-media--fb'></div>
-						<div class='social-media social-media--insta'></div>
-						<div class='social-media social-media--twitter'></div>
+				
+					<div id='calendar' class='calendar'>
+						<div class='calendar__head'>
+							<button id='month-prev'>&#8592;</button>
+							<div id='month' class='month'></div>
+							<button id='month-next'>&#8594;</button>
+							<div></div>
+							<button id='year-prev'>&#8592;</button>
+							<div id='year' class='year'></div>
+							<button id='year-next'>&#8594;</button>
+						</div>
+						<div id='days' class='calendar__days'></div>
 					</div>
+
 				</div>
 			</article>
+
+			
+
+			
+
+
+			<form novalidate name='' action='#'>
+				<select class='time'>
+					<option value=''>Choose time</option>
+				</select>
+				<select>
+					<option>manicure</option>
+					<option>repair</option>
+					<option>art</option>
+				</select>
+
+			</form>
+			
+			<button class='hero__btn'>BOOK</button>
+
         </main>
+		<footer>
+			<h3 class='hero__text hero__text--motto'>emmiesbeautycare</h3>
+			<div class='social-media social-media--fb'></div>
+			<div class='social-media social-media--insta'></div>
+			<div class='social-media social-media--twitter'></div>
+		</footer>
     </body>
 </html>
