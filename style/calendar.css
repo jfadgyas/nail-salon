@@ -1,4 +1,4 @@
-.booking-new {
+.booking {
   width: 100vw;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -7,22 +7,22 @@
           backdrop-filter: blur(0.2em);
 }
 
-.calendar {
+.booking__calendar {
   text-align: center;
 }
 
-.calendar__head, .calendar__days {
+.booking__calendar__head, .booking__calendar__days {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
 }
 
-.calendar__head__year, .calendar__head__month, .calendar__days__year, .calendar__days__month {
+.booking__calendar__head__year, .booking__calendar__head__month, .booking__calendar__days__year, .booking__calendar__days__month {
   padding: 0.5em;
 }
 
-.calendar__head__btn, .calendar__days__btn {
+.booking__calendar__head__btn, .booking__calendar__days__btn {
   background: none;
   border: none;
   color: white;
@@ -37,15 +37,15 @@
   cursor: pointer;
 }
 
-.calendar__head__btn--prev::before, .calendar__days__btn--prev::before {
+.booking__calendar__head__btn--prev::before, .booking__calendar__days__btn--prev::before {
   content: '\f0d9';
 }
 
-.calendar__head__btn--next::before, .calendar__days__btn--next::before {
+.booking__calendar__head__btn--next::before, .booking__calendar__days__btn--next::before {
   content: '\f0da';
 }
 
-.calendar__head--day, .calendar__days--day {
+.booking__calendar__head--day, .booking__calendar__days--day {
   height: 2.5em;
   margin: 2px;
   padding: 0.6em;
@@ -54,33 +54,24 @@
   border-radius: 5px;
 }
 
-.calendar__head--day:not(:empty), .calendar__days--day:not(:empty) {
+.booking__calendar__head--day:not(:empty), .booking__calendar__days--day:not(:empty) {
   cursor: pointer;
 }
 
-.calendar__head--head:nth-child(7n), .calendar__head--day:nth-child(7n), .calendar__days--head:nth-child(7n), .calendar__days--day:nth-child(7n) {
+.booking__calendar__head--head:nth-child(7n), .booking__calendar__head--day:nth-child(7n), .booking__calendar__days--head:nth-child(7n), .booking__calendar__days--day:nth-child(7n) {
   color: tomato;
 }
 
-.today {
-  border: 1px solid tomato;
-}
-
-.selected {
-  color: limegreen;
-  border: 1px solid limegreen;
-}
-
-.time,
-.treat {
+.booking__time, .booking__input, .booking__treat {
   margin: 1em;
+  padding: 0.5em;
   border-style: solid;
   border-width: 1px;
   border-top-color: rgba(255, 255, 255, 0.2);
   border-right-color: rgba(255, 255, 255, 0.3);
   border-left-color: transparent;
   border-bottom-color: rgba(184, 169, 169, 0.233);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(-10deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(-10deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
   -webkit-backdrop-filter: blur(0.2em);
           backdrop-filter: blur(0.2em);
   color: white;
@@ -90,15 +81,17 @@
   text-align: justify;
 }
 
-option:nth-child(1) {
-  color: rgba(255, 255, 255, 0.1);
+.booking__time option:checked, .booking__input option:checked, .booking__treat option:checked {
+  border: 1px solid limegreen;
+  outline: none;
 }
 
-option:nth-child(2) {
-  color: rgba(255, 255, 255, 0.3);
+.today {
+  border: 1px solid tomato;
 }
 
-option:nth-child(3) {
-  color: rgba(255, 255, 255, 0.7);
+.selected {
+  color: limegreen;
+  border: 1px solid limegreen;
 }
 /*# sourceMappingURL=calendar.css.map */

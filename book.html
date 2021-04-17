@@ -35,36 +35,55 @@
 						<p class='hero__text hero__text--motto'>because your beauty worth my time</p>
 					-->
 				
-					<form class='booking-new' novalidate name='booking-new' action='#'>
+					<form id='booking' class='booking' name='booking-new' action='#'>
 						<img class='hero__logo' src='tmp/logo_01.png' alt='logo'/>
-						<div id='calendar' class='calendar'>
-							<div class='calendar__head'>
-								<button id='month-prev' class='calendar__head__btn calendar__head__btn--prev'></button>
-								<div id='month' class='calendar__head__month'></div>
-								<button id='month-next' class='calendar__head__btn calendar__head__btn--next'></button>
+						<div id='calendar' class='booking__calendar'>
+							<div class='booking__calendar__head'>
+								<button id='month-prev' class='booking__calendar__head__btn booking__calendar__head__btn--prev'></button>
+								<div id='month' class='booking__calendar__head__month'></div>
+								<button id='month-next' class='booking__calendar__head__btn booking__calendar__head__btn--next'></button>
 								<div></div>
-								<button id='year-prev' class='calendar__head__btn calendar__head__btn--prev'></button>
-								<div id='year' class='calendar__head__year'></div>
-								<button id='year-next' class='calendar__head__btn calendar__head__btn--next'></button>
+								<button id='year-prev' class='booking__calendar__head__btn booking__calendar__head__btn--prev'></button>
+								<div id='year' class='booking__calendar__head__year'></div>
+								<button id='year-next' class='booking__calendar__head__btn booking__calendar__head__btn--next'></button>
 							</div>
-							<div id='days' class='calendar__days'></div>
+							<div id='days' class='booking__calendar__days'></div>
 						</div>
-					
-						<select class='time' size='5'>
-							<option value='1'>17:00</option>
+						<select id='time' class='booking__time' size='5'>
+							<option value='' selected>Time</option>
+							<option value='17:00'>17:00</option>
 							<option value='2'>17:15</option>
 							<option value='3'>17:30</option>
 							<option value='4'>17:45</option>
 							<option value='5'>18:00</option>
 							<option value='6'>18:15</option>
 						</select>
-						<select class='treat' size='5'>
+						<select id='treat' class='booking__treat' size='5'>
+							<option value='' selected>Treat</option>
 							<option>manicure</option>
 							<option>repair</option>
 							<option>Aprt</option>
 						</select>
 
-						<button class='hero__btn'>BOOK</button>
+						<div class='field__container'>
+							<label for='Name' class='contact__label'>
+								<input type='text' name='name' class='booking__input' required placeholder='Your name'>
+							</label>
+                        </div>
+                        <div class='field__container'>
+							<input type='tel' name='phone' class='booking__input' required placeholder='Tel' pattern='(?=[0-9]).{10,}'>
+                            <label for='phone' class='contact__label'>
+								Phone								
+							</label>
+                        </div>
+                        <div class='field__container'>
+                            <input type='email' name='email' class='booking__input' required placeholder='E-mail'>
+                            <label for='email' class='contact__label'>
+								
+							</label>
+                        </div>
+						
+						<button id='confirm' type='submit' class='hero__btn'>confirm</button>
 					</form>
 			
 

@@ -3,10 +3,17 @@ const calendar = document.querySelector('#calendar')
 const calendarDays = document.querySelector('#days')
 const monthNode = document.querySelector('#month')
 const yearNode = document.querySelector('#year')
+const timeSelector = document.querySelector('#time')
+const treatSelector = document.querySelector('#treat')
+const confirmBtn = document.querySelector('#confirm')
 
 const currentDate = new Date()
 let year = currentDate.getFullYear()
 let month = currentDate.getMonth()
+//object for selected things?
+let selectedDate
+let selectedTime
+let selectedTreat
 
 //Functions
 const pickDate = e => {
@@ -36,14 +43,30 @@ const pickDate = e => {
                     break
                 default: return
             }
+            selectedDate = ''
             return getCalendar(year, month)
         }
         if (document.querySelector('.selected')){
             document.querySelector('.selected').classList.remove('selected')
         }
         e.target.classList.add('selected')
+        selectedDate = e.target.dataset.date
         console.log(new Date(e.target.dataset.date))
         //get available times
+    }
+}
+
+const pickTime = e => {
+    if (e.target.value){
+        selectedTime = e.target.value
+        console.log(e.target.value)
+    }
+}
+
+const pickTreat = e => {
+    if (e.target.value){
+        selectedTreat = e.target.value
+        console.log(e.target.value)
     }
 }
 
@@ -60,13 +83,13 @@ const getCalendar = (selectedYear, selectedMonth) => {
     days.map(item => {
         const dayHead = document.createElement('p')
         dayHead.innerHTML = item
-        dayHead.classList.add('calendar__days--head')
+        dayHead.classList.add('booking__calendar__days--head')
         calendarDays.appendChild(dayHead)
     })
 
     for (let i = 1-dayOffset; i <= daysOfMonth; i++){
         const dayNode = document.createElement('p')
-        dayNode.classList.add('calendar__days--day')
+        dayNode.classList.add('booking__calendar__days--day')
         if (i > 0 ){
             let day = new Date(selectedYear, selectedMonth, i).toDateString()
             dayNode.id = i
@@ -80,7 +103,25 @@ const getCalendar = (selectedYear, selectedMonth) => {
     }
 }
 
+const validate = () => {
+    //maybe an object for the selected things?
+    if (!selectedDate){
+        console.log('datum missing')
+    }
+    if (!selectedTime){
+        console.log('time missing')
+    }
+    if (!selectedTreat){
+        console.log('treat missing')
+    }
+    //if everything filled and validated, show again, press book, and put in db
+    console.log(selectedDate, selectedTime, selectedTreat)
+}
+
 //Listeners
-calendar.addEventListener('click', e => pickDate(e))
+calendar.addEventListener('click', pickDate)
+timeSelector.addEventListener('change', pickTime)
+treatSelector.addEventListener('change', pickTreat)
+confirmBtn.addEventListener('click', validate)
 
 getCalendar(year, month)
