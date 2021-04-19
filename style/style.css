@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&display=swap");
 .hamburger {
   position: fixed;
@@ -10,17 +11,17 @@
 }
 
 .hamburger::before {
-  content: '\f550';
-  color: #f7e6e6;
-  padding-left: 1em;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-size: 20px;
   font-weight: 900;
+  font-size: 22px;
+  content: '\f550';
+  color: #f7e6e6;
+  padding-left: 1em;
   cursor: pointer;
   -webkit-transition: 500ms;
   transition: 500ms;
@@ -112,33 +113,52 @@ main {
           flex-direction: column;
 }
 
-.hero,
-.about,
-.prices,
-.product,
-.contact {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.hero__left,
-.about__left,
-.prices__left,
-.product__left,
-.contact__left {
+.container__left {
   width: 50vw;
+}
+
+.container__left--hero {
   background: url("../tmp/bg-new.jpg");
   background-position: 75%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.hero__right,
-.about__right,
-.prices__right,
-.product__right,
-.contact__right {
+.container__left--about {
+  background: url("../tmp/8ayoy5lwqy151.jpg");
+  background-position: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container__left--prices {
+  background: url("../tmp/unnamed.jpg");
+  background-position: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container__left--product {
+  background: url("../tmp/la-roche-posay-silicium-n24-rouge-parfait-7ml.jpg");
+  background-position: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container__left--contact {
+  background: url("../tmp/1b032032b3941f54cd4db86bb4751206.jpg");
+  background-position: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container__right {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -150,21 +170,20 @@ main {
   background: black;
 }
 
-.hero__logo,
-.about__logo,
-.prices__logo,
-.product__logo,
-.contact__logo {
+.container__right__price-cards {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.container__logo {
   width: 100%;
   height: 3.5em;
   text-align: center;
 }
 
-.hero__title,
-.about__title,
-.prices__title,
-.product__title,
-.contact__title {
+.container__title {
   margin: 0;
   font-family: 'Bodoni Moda', serif;
   font-size: 1.8em;
@@ -172,68 +191,32 @@ main {
   color: #f7e6e6;
 }
 
-.hero__title--sub,
-.about__title--sub,
-.prices__title--sub,
-.product__title--sub,
-.contact__title--sub {
+.container__title--sub {
   text-transform: unset;
   font-style: italic;
 }
 
-.hero__text,
-.about__text,
-.prices__text,
-.product__text,
-.contact__text {
+.container__text {
+  margin: 0;
   padding: 0.5em;
   padding-top: 1.5em;
   color: #f7e6e6;
 }
 
-.hero__text--motto,
-.about__text--motto,
-.prices__text--motto,
-.product__text--motto,
-.contact__text--motto {
-  margin: 0;
+.container__text--motto {
   padding: 0 1em;
   font-size: 10px;
   text-transform: uppercase;
   text-align: center;
 }
 
-.hero__text--price-list,
-.about__text--price-list,
-.prices__text--price-list,
-.product__text--price-list,
-.contact__text--price-list {
-  margin: 0;
-  padding: 0.5em;
+.container__text--price-list {
   padding-bottom: 0;
   font-size: 13px;
   text-transform: uppercase;
 }
 
-.hero__desc-container,
-.about__desc-container,
-.prices__desc-container,
-.product__desc-container,
-.contact__desc-container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero__desc__photo,
-.about__desc__photo,
-.prices__desc__photo,
-.product__desc__photo,
-.contact__desc__photo {
+.container__photo {
   margin: 1em;
   width: 100px;
   height: 100px;
@@ -241,22 +224,7 @@ main {
   border-radius: 50%;
 }
 
-.hero__cards,
-.about__cards,
-.prices__cards,
-.product__cards,
-.contact__cards {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.hero__btn,
-.about__btn,
-.prices__btn,
-.product__btn,
-.contact__btn {
+.btn {
   padding: 0.5em;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(255, 255, 255, 0.1)), to(rgba(247, 230, 230, 0.5)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1) 50%, rgba(247, 230, 230, 0.5));
@@ -280,61 +248,21 @@ main {
   transition: 500ms;
 }
 
-.hero__btn:hover,
-.about__btn:hover,
-.prices__btn:hover,
-.product__btn:hover,
-.contact__btn:hover {
+.btn:hover {
   background-position: right;
 }
 
-.hero .about__left,
-.about .about__left,
-.prices .about__left,
-.product .about__left,
-.contact .about__left {
-  background: url("../tmp/8ayoy5lwqy151.jpg");
-  background-position: 40%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.hero .prices__left,
-.about .prices__left,
-.prices .prices__left,
-.product .prices__left,
-.contact .prices__left {
-  background: url("../tmp/unnamed.jpg");
-  background-position: 40%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.hero .product__left,
-.about .product__left,
-.prices .product__left,
-.product .product__left,
-.contact .product__left {
-  background: url("../tmp/la-roche-posay-silicium-n24-rouge-parfait-7ml.jpg");
-  background-position: 40%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.hero .contact__left,
-.about .contact__left,
-.prices .contact__left,
-.product .contact__left,
-.contact .contact__left {
-  background: url("../tmp/1b032032b3941f54cd4db86bb4751206.jpg");
-  background-position: 40%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.social-media {
+.icon {
   display: inline-block;
-  margin-top: 2px;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 2em;
+  margin-bottom: 1em;
   width: 15px;
   height: 15px;
   padding: 0.5em;
@@ -342,78 +270,64 @@ main {
   color: #f7e6e6;
   border: 1px solid rgba(247, 230, 230, 0.5);
   border-radius: 50%;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Brands";
-  font-size: 14px;
   text-align: center;
   cursor: pointer;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
 
-.social-media--fb::before {
-  content: '\f39e';
-}
-
-.social-media--fb:hover {
-  background: #3b5998;
-  color: white;
-}
-
-.social-media--insta::before {
-  content: '\f16d';
-}
-
-.social-media--insta:hover {
-  background: #8a3ab9;
-  color: white;
-}
-
-.social-media--twitter::before {
-  content: '\f099';
-}
-
-.social-media--twitter:hover {
-  background: #00acee;
-  color: white;
-}
-
-.icons {
+.icon__social-media {
   display: inline-block;
-  margin-top: 2px;
-  width: 15px;
-  height: 15px;
-  padding: 0.5em;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), linear-gradient(-10deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-  color: #f7e6e6;
-  border: 1px solid rgba(247, 230, 230, 0.5);
-  border-radius: 50%;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-size: 14px;
+  font-family: "Font Awesome 5 Brands";
   font-weight: 600;
-  text-align: center;
+  font-size: 14px;
+  margin-top: 2px;
 }
 
-.icons--address::before {
+.icon__social-media--fb::before {
+  content: '\f39e';
+}
+
+.icon__social-media--fb:hover {
+  background: #3b5998;
+  color: white;
+}
+
+.icon__social-media--insta::before {
+  content: '\f16d';
+}
+
+.icon__social-media--insta:hover {
+  background: #8a3ab9;
+  color: white;
+}
+
+.icon__social-media--twitter::before {
+  content: '\f099';
+}
+
+.icon__social-media--twitter:hover {
+  background: #00acee;
+  color: white;
+}
+
+.icon--address::before {
   content: '\e065';
 }
 
-.icons--tel::before {
+.icon--tel::before {
   content: '\f879';
 }
 
-.icons--email::before {
+.icon--email::before {
   content: '\f1fa';
 }
 
-.icons--msg::before {
+.icon--msg::before {
   content: '\f0e0';
 }
 
