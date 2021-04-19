@@ -17,8 +17,9 @@ let selectedTreat
 
 //Functions
 const pickDate = e => {
-    if (e.target.id && (e.target.matches('p') || e.target.type == 'submit')){
-        if (e.target.type == 'submit'){
+    console.log(e.target.type)
+    if (e.target.id && (e.target.matches('p') || e.target.type == 'button')){
+        if (e.target.type == 'button'){
             calendarDays.innerHTML = ''
             switch (e.target.id){
                 case 'month-prev':
