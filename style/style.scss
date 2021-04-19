@@ -230,6 +230,15 @@ main{
     width: 80%;
 }
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5em;
+    width: 100%;
+    background-color: black;
+}
 
 // .feature{
 //     justify-content: center; //for flex on the page

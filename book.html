@@ -65,10 +65,11 @@
 							<option>Aprt</option>
 						</select>
 
-						<div class='field__container'>
-							<label for='Name' class='contact__label'>
-								<input type='text' name='name' class='booking__input' required placeholder='Your name'>
-							</label>
+						<div class='booking__container'>
+							<input id='name' type='text' name='name' class='booking__input' placeholder='Your name'></input>
+							<span class='booking__check booking__check--ok'></span>
+							<span class='booking__check booking__check--wrong'></span>
+							<small class='container__text container__text--motto booking__error'>error</small>
                         </div>
                         <div class='field__container'>
 							<input type='tel' name='phone' class='booking__input' required placeholder='Tel' pattern='(?=[0-9]).{10,}'>

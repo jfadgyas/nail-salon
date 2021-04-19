@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css");
 .booking {
   width: 100vw;
   -ms-flex-item-align: end;
@@ -23,17 +24,17 @@
 }
 
 .booking__calendar__head__btn, .booking__calendar__days__btn {
-  background: none;
-  border: none;
-  color: white;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-size: 20px;
   font-weight: 900;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
   cursor: pointer;
 }
 
@@ -64,6 +65,7 @@
 
 .booking__time, .booking__input, .booking__treat {
   margin: 1em;
+  margin-bottom: 0.2em;
   padding: 0.5em;
   border-style: solid;
   border-width: 1px;
@@ -86,6 +88,46 @@
   outline: none;
 }
 
+.booking__input {
+  width: 90%;
+}
+
+.booking__input.success {
+  border: 1px solid limegreen;
+}
+
+.booking__container {
+  position: relative;
+}
+
+.booking__check {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  right: 1.5em;
+  top: 1em;
+  visibility: hidden;
+}
+
+.booking__check--ok::before {
+  content: '\f118';
+}
+
+.booking__check--wrong::before {
+  content: '\f119';
+}
+
+.booking__error {
+  margin-left: 1em;
+  visibility: hidden;
+}
+
 .today {
   border: 1px solid tomato;
 }
@@ -93,5 +135,15 @@
 .selected {
   color: limegreen;
   border: 1px solid limegreen;
+}
+
+.success {
+  visibility: visible;
+  color: limegreen;
+}
+
+.error {
+  visibility: visible;
+  color: tomato;
 }
 /*# sourceMappingURL=calendar.css.map */

@@ -1,3 +1,5 @@
+@import './icons';
+
 .booking{
     width: 100vw;
     align-self: flex-end;
@@ -16,26 +18,19 @@
                 padding: 0.5em;
             }
             &__btn{
+                @include icons('Free', 20px, 900);
                 background: none;
                 border: none;
                 color: white;//$text-color;
-                display: inline-block;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                font-family: "Font Awesome 5 Free";
-                font-size: 20px;
-                font-weight: 900;
                 cursor: pointer;
                 &--prev{
                     &::before{
-                        content: '\f0d9'
+                        content: '\f0d9';
                     }
                 }
                 &--next{
                     &::before{
-                        content: '\f0da'
+                        content: '\f0da';
                     }
                 }
             }
@@ -61,6 +56,7 @@
     &__treat{
         // width: 20%;
         margin: 1em;
+        margin-bottom: 0.2em;
         padding: 0.5em;
         border-style: solid;
         border-width: 1px;
@@ -71,12 +67,9 @@
         background: 
             linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
             linear-gradient(-10deg, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+        background-position: left;
+        background-size: 200%;
         // backdrop-filter: blur(0.2em);
-
-        // background: linear-gradient(to right bottom, rgba(255,255,255, 0.1) 50%, rgba(247, 230, 230, 0.5));
-    background-position: left;
-    background-size: 200%;
-    // backdrop-filter: blur(0.2em);
 
         color: white;
         font-family: 'Montserrat', sans-serif;
@@ -87,6 +80,33 @@
             border: 1px solid rgb(50, 205, 50);
             outline: none;
         }
+    }
+    &__input{
+        width: 90%;
+    }
+    &__input.success{
+        border: 1px solid rgb(50, 205, 50);
+    }
+    &__container{
+        position: relative;
+    }
+    &__check{
+        @include icons('Free', 20px, 600);
+        position: absolute;
+        right: 1.5em;
+        top: 1em;
+        visibility: hidden;
+        &--ok::before{
+            content: '\f118'; //\f00c';
+            
+        }
+        &--wrong::before{
+            content: '\f119';
+        }
+    }
+    &__error{
+        margin-left: 1em;
+        visibility: hidden;
     }
 }
 
@@ -99,3 +119,14 @@
     border: 1px solid rgb(50, 205, 50);
 }
 
+.success{
+    visibility: visible;
+    color: rgb(50, 205, 50);
+    // border: 1px solid rgb(50, 205, 50);
+}
+
+.error{
+    visibility: visible;
+    color: rgb(255, 99, 71);
+    // border: 1px solid rgb(255, 99, 71);
+}

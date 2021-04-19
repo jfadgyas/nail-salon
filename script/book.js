@@ -1,10 +1,14 @@
 //Variables
+const form = document.forms[0]
 const calendar = document.querySelector('#calendar')
 const calendarDays = document.querySelector('#days')
 const monthNode = document.querySelector('#month')
 const yearNode = document.querySelector('#year')
 const timeSelector = document.querySelector('#time')
 const treatSelector = document.querySelector('#treat')
+const userName = document.querySelector('#name')
+const tel = document.querySelector('#tel')
+const email = document.querySelector('#email')
 const confirmBtn = document.querySelector('#confirm')
 
 const currentDate = new Date()
@@ -104,7 +108,9 @@ const getCalendar = (selectedYear, selectedMonth) => {
     }
 }
 
-const validate = () => {
+const validate = e => {
+    e.preventDefault();
+    
     //maybe an object for the selected things?
     if (!selectedDate){
         console.log('datum missing')
@@ -115,9 +121,21 @@ const validate = () => {
     if (!selectedTreat){
         console.log('treat missing')
     }
+    if (!userName.value){
+        console.log('user missing')
+        setErrorFor(userName, 'Name cannot be blank!')
+    }
+    //ha datum before today, error
     //if everything filled and validated, show again, press book, and put in db
     console.log(selectedDate, selectedTime, selectedTreat)
 }
+
+const setErrorFor = (input, msg) => {
+    const error = input.parentElement.querySelector('small')
+    error.innerText = msg
+    error.classList.toggle('error')
+}
+
 
 //Listeners
 calendar.addEventListener('click', pickDate)
