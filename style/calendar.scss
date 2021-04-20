@@ -81,33 +81,48 @@
             outline: none;
         }
     }
+    &__container{
+        position: relative;
+        &__check{
+            @include icons('Free', 20px, 600);
+            position: absolute;
+            right: 1.5em;
+            top: 1em;
+            visibility: hidden;
+            &--ok::before{
+                content: '\f118'; //\f00c';
+            }
+            &--wrong::before{
+                content: '\f119';
+                color: rgb(255, 99, 71);
+            }
+        }
+        &__error{
+            margin-left: 1em;
+            // visibility: hidden;
+        }
+        &.error &__check--wrong,
+        &.error &__error{
+            visibility: visible;
+            color: rgb(255, 99, 71);
+        }
+        //input keret???
+    }
     &__input{
         width: 90%;
     }
-    &__input.success{
-        border: 1px solid rgb(50, 205, 50);
-    }
-    &__container{
-        position: relative;
-    }
-    &__check{
-        @include icons('Free', 20px, 600);
-        position: absolute;
-        right: 1.5em;
-        top: 1em;
-        visibility: hidden;
-        &--ok::before{
-            content: '\f118'; //\f00c';
-            
-        }
-        &--wrong::before{
-            content: '\f119';
-        }
-    }
-    &__error{
-        margin-left: 1em;
-        visibility: hidden;
-    }
+    
+    
+
+    // &__container.success{
+    //     border: 1px solid rgb(50, 205, 50);
+    // }
+    // &__container.error{
+    //     .booking__input{
+    //         border: 1px solid rgb(255, 99, 71);
+    //     }
+    // }
+    
 }
 
 .today{
@@ -119,14 +134,14 @@
     border: 1px solid rgb(50, 205, 50);
 }
 
-.success{
-    visibility: visible;
-    color: rgb(50, 205, 50);
-    // border: 1px solid rgb(50, 205, 50);
-}
+// .success{
+//     visibility: visible;
+//     color: rgb(50, 205, 50);
+//     // border: 1px solid rgb(50, 205, 50);
+// }
 
-.error{
-    visibility: visible;
-    color: rgb(255, 99, 71);
-    // border: 1px solid rgb(255, 99, 71);
-}
+// .error{
+//     visibility: visible;
+//     color: rgb(255, 99, 71);
+//     // border: 1px solid rgb(255, 99, 71);
+// }

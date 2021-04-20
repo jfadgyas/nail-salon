@@ -15,9 +15,15 @@ const currentDate = new Date()
 let year = currentDate.getFullYear()
 let month = currentDate.getMonth()
 //object for selected things?
-let selectedDate
-let selectedTime
-let selectedTreat
+const newBooking = {
+    selectedDate: '',
+    selectedTime: '',
+    selectedTreat: '',
+    name: '',
+    tel: '',
+    email: ''
+}
+
 
 //Functions
 const pickDate = e => {
@@ -48,14 +54,14 @@ const pickDate = e => {
                     break
                 default: return
             }
-            selectedDate = ''
+            newBooking.selectedDate = ''
             return getCalendar(year, month)
         }
         if (document.querySelector('.selected')){
             document.querySelector('.selected').classList.remove('selected')
         }
         e.target.classList.add('selected')
-        selectedDate = e.target.dataset.date
+        newBooking.selectedDate = e.target.dataset.date
         console.log(new Date(e.target.dataset.date))
         //get available times
     }
@@ -63,14 +69,14 @@ const pickDate = e => {
 
 const pickTime = e => {
     if (e.target.value){
-        selectedTime = e.target.value
+        newBooking.selectedTime = e.target.value
         console.log(e.target.value)
     }
 }
 
 const pickTreat = e => {
     if (e.target.value){
-        selectedTreat = e.target.value
+        newBooking.selectedTreat = e.target.value
         console.log(e.target.value)
     }
 }
@@ -112,30 +118,36 @@ const validate = e => {
     e.preventDefault();
     
     //maybe an object for the selected things?
-    if (!selectedDate){
+    if (!newBooking.selectedDate){
         console.log('datum missing')
     }
-    if (!selectedTime){
+    if (!newBooking.selectedTime){
         console.log('time missing')
     }
-    if (!selectedTreat){
+    if (!newBooking.selectedTreat){
         console.log('treat missing')
     }
     if (!userName.value){
         console.log('user missing')
         setErrorFor(userName, 'Name cannot be blank!')
     }
+    setSuccessFor(userName)
     //ha datum before today, error
     //if everything filled and validated, show again, press book, and put in db
-    console.log(selectedDate, selectedTime, selectedTreat)
+    console.log(newBooking.selectedDate, newBooking.selectedTime, newBooking.selectedTreat)
 }
 
 const setErrorFor = (input, msg) => {
-    const error = input.parentElement.querySelector('small')
-    error.innerText = msg
-    error.classList.toggle('error')
+    const error = input.parentElement
+    const errorMsg = error.querySelector('small')
+    errorMsg.innerText = msg
+    error.classList.add('error')
+    // errorMsg.classList.add('error')
+    // input.classList.add('error')
 }
 
+const setSuccessFor = input => {
+}
 
 //Listeners
 calendar.addEventListener('click', pickDate)

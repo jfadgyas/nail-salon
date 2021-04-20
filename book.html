@@ -49,7 +49,7 @@
 							</div>
 							<div id='days' class='booking__calendar__days'></div>
 						</div>
-						<select id='time' class='booking__time' size='5'>
+						<select id='time' class='booking__time' >
 							<option value='' selected>Time</option>
 							<option value='17:00'>17:00</option>
 							<option value='2'>17:15</option>
@@ -66,22 +66,23 @@
 						</select>
 
 						<div class='booking__container'>
+							<div class=''></div>
 							<input id='name' type='text' name='name' class='booking__input' placeholder='Your name'></input>
-							<span class='booking__check booking__check--ok'></span>
-							<span class='booking__check booking__check--wrong'></span>
-							<small class='container__text container__text--motto booking__error'>error</small>
+							<div class='booking__container__check booking__container__check--ok'></div>
+							<div class='booking__container__check booking__container__check--wrong'></div>
+							<small class='container__text container__text--motto booking__container__error'>Required</small>
                         </div>
-                        <div class='field__container'>
-							<input type='tel' name='phone' class='booking__input' required placeholder='Tel' pattern='(?=[0-9]).{10,}'>
-                            <label for='phone' class='contact__label'>
-								Phone								
-							</label>
+                        <div class='booking__container'>
+							<input type='tel' name='tel' class='booking__input' placeholder='Tel' pattern='(?=[0-9]).{10,}'>
+                            <div class='booking__container__check booking__container__check--ok'></div>
+							<div class='booking__container__check booking__container__check--wrong'></div>
+							<small class='container__text container__text--motto booking__container__error'>Required</small>
                         </div>
-                        <div class='field__container'>
-                            <input type='email' name='email' class='booking__input' required placeholder='E-mail'>
-                            <label for='email' class='contact__label'>
-								
-							</label>
+                        <div class='booking__container'>
+                            <input type='email' name='email' class='booking__input' placeholder='E-mail'>
+                            <div class='booking__container__check booking__container__check--ok'></div>
+							<div class='booking__container__check booking__container__check--wrong'></div>
+							<small class='container__text container__text--motto booking__container__error'>Required</small>
                         </div>
 						
 						<button id='confirm' type='submit' class='btn'>confirm</button>
