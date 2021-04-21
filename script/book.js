@@ -12,9 +12,9 @@ const currentDate = new Date()
 let year = currentDate.getFullYear()
 let month = currentDate.getMonth()
 const newBooking = {
-    selectedDate: '',
-    selectedTime: '',
-    selectedTreat: '',
+    date: '',
+    time: '',
+    treat: '',
     name: '',
     tel: '',
     email: ''
@@ -50,14 +50,14 @@ const pickDate = e => {
                     break
                 default: return
             }
-            newBooking.selectedDate = ''
+            newBooking.date = ''
             return getCalendar(year, month)
         }
         if (document.querySelector('.selected')){
             document.querySelector('.selected').classList.remove('selected')
         }
         e.target.classList.add('selected')
-        newBooking.selectedDate = e.target.dataset.date
+        newBooking.date = e.target.dataset.date
         console.log(new Date(e.target.dataset.date))
         //get available times
     }
@@ -65,14 +65,14 @@ const pickDate = e => {
 
 const pickTime = e => {
     if (e.target.value){
-        newBooking.selectedTime = e.target.value
+        newBooking.time = e.target.value
         console.log(e.target.value)
     }
 }
 
 const pickTreat = e => {
     if (e.target.value){
-        newBooking.selectedTreat = e.target.value
+        newBooking.treat = e.target.value
         console.log(e.target.value)
     }
 }
@@ -113,7 +113,7 @@ const getCalendar = (selectedYear, selectedMonth) => {
 const validate = e => {
     e.preventDefault();
     for (let i in newBooking){
-        if (i !== 'selectedDate'){
+        if (i !== 'date'){
             let formField = form.elements[`${i}`]
             if (!formField.value.trim()){
                 setMsgFor(formField, `${formField.name} cannot be blank!`, false)
@@ -129,16 +129,16 @@ const validate = e => {
     }
     
     // need to check date apart, because it's not a form element
-    if (!newBooking.selectedDate){
+    if (!newBooking.date){
         return setMsgFor(calendarDays, 'please select date!', false)
     } 
-    if (new Date(newBooking.selectedDate) < currentDate.setHours(0, 0, 0, 0)){
+    if (new Date(newBooking.date) < currentDate.setHours(0, 0, 0, 0)){
         return setMsgFor(calendarDays, 'Date is in the past!', false)
     }
     setMsgFor(calendarDays, 'Ok', true)
     
     //if everything filled and validated, show again, press book, and put in db
-    console.log(newBooking.selectedDate, newBooking.selectedTime, newBooking.selectedTreat)
+    console.log(newBooking.date, newBooking.time, newBooking.treat)
 }
 
 const setMsgFor = (input, msg, isSuccess) => {
