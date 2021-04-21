@@ -37,7 +37,7 @@
 				
 					<form id='booking' class='booking' name='booking-new' action='#'>
 						<img class='container__logo' src='tmp/logo_01.png' alt='logo'/>
-						<div id='calendar' class='booking__calendar'>
+						<div id='calendar' class='booking__container booking__calendar'>
 							<div class='booking__calendar__head'>
 								<button id='month-prev' type='button' class='booking__calendar__head__btn booking__calendar__head__btn--prev'></button>
 								<div id='month' class='booking__calendar__head__month'></div>
@@ -48,22 +48,29 @@
 								<button id='year-next' type='button' class='booking__calendar__head__btn booking__calendar__head__btn--next'></button>
 							</div>
 							<div id='days' class='booking__calendar__days'></div>
+							<small class='container__text container__text--motto booking__container__error'>Required</small>
 						</div>
-						<select id='time' class='booking__time' >
-							<option value='' selected>Time</option>
-							<option value='17:00'>17:00</option>
-							<option value='2'>17:15</option>
-							<option value='3'>17:30</option>
-							<option value='4'>17:45</option>
-							<option value='5'>18:00</option>
-							<option value='6'>18:15</option>
-						</select>
-						<select id='treat' class='booking__treat' size='5'>
-							<option value='' selected>Treat</option>
-							<option>manicure</option>
-							<option>repair</option>
-							<option>Aprt</option>
-						</select>
+						<div class='booking__container'>
+							<select id='time' name='selectedTime' class='booking__time' size='5'>
+								<option value='' selected>Time</option>
+								<option value='17:00'>17:00</option>
+								<option value='2'>17:15</option>
+								<option value='3'>17:30</option>
+								<option value='4'>17:45</option>
+								<option value='5'>18:00</option>
+								<option value='6'>18:15</option>
+							</select>
+							<small class='container__text container__text--motto booking__container__error'>Required</small>
+						</div>
+						<div class='booking__container'>
+							<select id='treat' name='selectedTreat' class='booking__treat' size='5'>
+								<option value='' selected>Treat</option>
+								<option>manicure</option>
+								<option>repair</option>
+								<option>Aprt</option>
+							</select>
+							<small class='container__text container__text--motto booking__container__error'>Required</small>
+						</div>
 
 						<div class='booking__container'>
 							<div class=''></div>
@@ -73,7 +80,7 @@
 							<small class='container__text container__text--motto booking__container__error'>Required</small>
                         </div>
                         <div class='booking__container'>
-							<input type='tel' name='tel' class='booking__input' placeholder='Tel' pattern='(?=[0-9]).{10,}'>
+							<input type='tel' name='tel' class='booking__input' placeholder='Tel'>
                             <div class='booking__container__check booking__container__check--ok'></div>
 							<div class='booking__container__check booking__container__check--wrong'></div>
 							<small class='container__text container__text--motto booking__container__error'>Required</small>

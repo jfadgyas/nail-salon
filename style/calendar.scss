@@ -106,7 +106,11 @@
             visibility: visible;
             color: rgb(255, 99, 71);
         }
-        //input keret???
+        &.success &__check--ok,
+        &.success &__error{
+            visibility: visible;
+            color: rgb(50, 205, 50);
+        }
     }
     &__input{
         width: 90%;
@@ -133,15 +137,3 @@
     color: rgb(50, 205, 50);
     border: 1px solid rgb(50, 205, 50);
 }
-
-// .success{
-//     visibility: visible;
-//     color: rgb(50, 205, 50);
-//     // border: 1px solid rgb(50, 205, 50);
-// }
-
-// .error{
-//     visibility: visible;
-//     color: rgb(255, 99, 71);
-//     // border: 1px solid rgb(255, 99, 71);
-// }

@@ -6,15 +6,11 @@ const monthNode = document.querySelector('#month')
 const yearNode = document.querySelector('#year')
 const timeSelector = document.querySelector('#time')
 const treatSelector = document.querySelector('#treat')
-const userName = document.querySelector('#name')
-const tel = document.querySelector('#tel')
-const email = document.querySelector('#email')
 const confirmBtn = document.querySelector('#confirm')
 
 const currentDate = new Date()
 let year = currentDate.getFullYear()
 let month = currentDate.getMonth()
-//object for selected things?
 const newBooking = {
     selectedDate: '',
     selectedTime: '',
@@ -116,37 +112,54 @@ const getCalendar = (selectedYear, selectedMonth) => {
 
 const validate = e => {
     e.preventDefault();
+    for (let i in newBooking){
+        if (i !== 'selectedDate'){
+            let formField = form.elements[`${i}`]
+            if (!formField.value.trim()){
+                setMsgFor(formField, `${formField.name} cannot be blank!`, false)
+            }
+            else if ((formField.name == 'tel' || formField.name == 'email') && !checkField(formField)){
+                // check tel and email with regex
+                setMsgFor(formField, `Wrong ${formField.name} format!`, false)
+            }
+            else {
+                setMsgFor(formField, 'Ok', true)
+            }
+        }
+    }
     
-    //maybe an object for the selected things?
+    // need to check date apart, because it's not a form element
     if (!newBooking.selectedDate){
-        console.log('datum missing')
+        return setMsgFor(calendarDays, 'please select date!', false)
+    } 
+    if (new Date(newBooking.selectedDate) < currentDate.setHours(0, 0, 0, 0)){
+        return setMsgFor(calendarDays, 'Date is in the past!', false)
     }
-    if (!newBooking.selectedTime){
-        console.log('time missing')
-    }
-    if (!newBooking.selectedTreat){
-        console.log('treat missing')
-    }
-    if (!userName.value){
-        console.log('user missing')
-        setErrorFor(userName, 'Name cannot be blank!')
-    }
-    setSuccessFor(userName)
-    //ha datum before today, error
+    setMsgFor(calendarDays, 'Ok', true)
+    
     //if everything filled and validated, show again, press book, and put in db
     console.log(newBooking.selectedDate, newBooking.selectedTime, newBooking.selectedTreat)
 }
 
-const setErrorFor = (input, msg) => {
-    const error = input.parentElement
-    const errorMsg = error.querySelector('small')
+const setMsgFor = (input, msg, isSuccess) => {
+    const formField = input.parentElement
+    const errorMsg = formField.querySelector('small')
     errorMsg.innerText = msg
-    error.classList.add('error')
-    // errorMsg.classList.add('error')
-    // input.classList.add('error')
+    if (!isSuccess){
+        formField.classList.remove('success')
+        formField.classList.add('error')
+        return false
+    }
+    formField.classList.remove('error')
+    formField.classList.add('success')
 }
 
-const setSuccessFor = input => {
+const checkField = field => {
+    const regex = {
+        tel: /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
+        email: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/
+    }
+    return regex[field.name].test(field.value.trim())
 }
 
 //Listeners

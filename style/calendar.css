@@ -126,6 +126,12 @@
   color: tomato;
 }
 
+.booking__container.success .booking__container__check--ok,
+.booking__container.success .booking__container__error {
+  visibility: visible;
+  color: limegreen;
+}
+
 .booking__input {
   width: 90%;
 }
