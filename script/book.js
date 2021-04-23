@@ -20,8 +20,15 @@ const newBooking = {
     email: ''
 }
 
-
 //Functions
+
+// load price sheet data for treat selection
+let treatItems
+const getTreatList = async ()=> {
+    treatItems = await fetch('./data/prices.json').then(r=>r.json())
+    treatItems.map(treatGroup => treatGroup.items.map(treat => console.log(treat)))
+}
+
 const pickDate = e => {
     console.log(e.target.type)
     if (e.target.id && (e.target.matches('p') || e.target.type == 'button')){

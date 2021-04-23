@@ -118,17 +118,6 @@
         width: 90%;
     }
     
-    
-
-    // &__container.success{
-    //     border: 1px solid rgb(50, 205, 50);
-    // }
-    // &__container.error{
-    //     .booking__input{
-    //         border: 1px solid rgb(255, 99, 71);
-    //     }
-    // }
-    
 }
 
 .today{
@@ -138,4 +127,9 @@
 .selected{
     color: rgb(50, 205, 50);
     border: 1px solid rgb(50, 205, 50);
+}
+
+.btn{
+    display: block;
+    margin: 1em auto;
 }

@@ -1,0 +1,118 @@
+[
+    {
+        "group": "Gellak",
+        "items": [
+            {
+                "name": "New set",
+                "description": "",
+                "price": "€ 38.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Refill",
+                "description": "Same colour",
+                "price": "€ 28.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Baby-boomer",
+                "description": "",
+                "price": "€ 38.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            }
+        ]
+    },
+    {
+        "group": "Acryl",
+        "items": [
+            {
+                "name": "New set",
+                "description": "",
+                "price": "€ 45.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Refill",
+                "description": "Same colour  or clear",
+                "price": "€ 35.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Baby-boomer",
+                "description": "",
+                "price": "€ 55.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            }
+        ]
+    },
+    {
+        "group": "Gel",
+        "items": [
+            {
+                "name": "New set",
+                "description": "",
+                "price": "€ 45.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Refill",
+                "description": "Same colour  or clear",
+                "price": "€ 35.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Baby-boomer",
+                "description": "",
+                "price": "€ 55.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            }
+        ]
+    },
+    {
+        "group": "Misc",
+        "items": [
+            {
+                "name": "SPA manicure",
+                "description": "Incl.: Handmassage, Exfoliation, Cuticule treatment, Grooming",
+                "price": "€ 42.-",
+                "price-detail": "",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Hand-reflexology",
+                "description": "Same colour or clear",
+                "price": "€ 55",
+                "price-detail": "/30min",
+                "action-price": "",
+                "action-until": ""
+            },
+            {
+                "name": "Decoration:",
+                "description": "",
+                "price": "€ 2.5",
+                "price-detail": "/finger",
+                "action-price": "",
+                "action-until": ""
+            }
+        ]
+    }
+]

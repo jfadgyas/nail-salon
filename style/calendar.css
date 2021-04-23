@@ -160,4 +160,9 @@
   color: limegreen;
   border: 1px solid limegreen;
 }
+
+.btn {
+  display: block;
+  margin: 1em auto;
+}
 /*# sourceMappingURL=calendar.css.map */
