@@ -63,6 +63,10 @@
   color: tomato;
 }
 
+.booking__time, .booking__treat {
+  -webkit-appearance: menulist;
+}
+
 .booking__input, .booking__time, .booking__treat {
   margin: 1em 0 0.2em 1em;
   padding: 0.5em;
@@ -80,7 +84,6 @@
   font-size: 16px;
   letter-spacing: 2px;
   text-align: justify;
-  -webkit-appearance: menulist;
 }
 
 .booking__input option:checked, .booking__time option:checked, .booking__treat option:checked {
