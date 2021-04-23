@@ -63,11 +63,7 @@
   color: tomato;
 }
 
-.booking__time, .booking__treat {
-  -webkit-appearance: menulist;
-}
-
-.booking__input, .booking__time, .booking__treat {
+.booking__time, .booking__treat, .booking__input {
   margin: 1em 0 0.2em 1em;
   padding: 0.5em;
   border-style: solid;
@@ -86,9 +82,14 @@
   text-align: justify;
 }
 
-.booking__input option:checked, .booking__time option:checked, .booking__treat option:checked {
+.booking__time option:checked, .booking__treat option:checked, .booking__input option:checked {
   border: 1px solid limegreen;
   outline: none;
+}
+
+.booking__time, .booking__treat {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(-10deg, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  -webkit-appearance: menulist;
 }
 
 .booking__container {
