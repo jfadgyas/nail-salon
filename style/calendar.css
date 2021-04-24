@@ -90,7 +90,7 @@
 .booking__time, .booking__treat {
   -webkit-appearance: none;
   background: url("../tmp/down-arrow.png") no-repeat right center, linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(-10deg, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-  padding-right: 20px;
+  padding-right: 16px;
 }
 
 .booking__container {
