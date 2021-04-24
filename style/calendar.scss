@@ -77,24 +77,28 @@
             outline: none;
         }
     }
+
+    
     &__time,
     &__treat{
-        background: 
-            url('../tmp/down-arrow.png') no-repeat 110% center, 
+        -webkit-appearance: none; //menulist
+        // -moz-appearance: none;
+        // appearance: none;
+        background: url('../tmp/down-arrow.png') no-repeat right center, 
             linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
             linear-gradient(-10deg, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
         
-        // width: 100px; 
-        // text-indent: 0.01px; 
-        // text-overflow: "";
+        width: min-content; 
+        text-indent: 0.01px; 
+        text-overflow: "";
         
         
         
         // background-position: left;
         // background-size: 200%;
-        appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none; //menulist
+        
+        
+        
     }
     &__container{
         position: relative;
