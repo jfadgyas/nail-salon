@@ -88,9 +88,10 @@
             linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
             linear-gradient(-10deg, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
         
-        width: fit-content; 
-        text-indent: 0.01px; 
-        text-overflow: "";
+        // width: fit-content; 
+        // text-indent: 0.01px; 
+        // text-overflow: "";
+        padding-right: 10px;
         
         
         
@@ -105,7 +106,7 @@
         &--flex{
             display: inline-flex;
             flex-direction: column;
-            // width: min-content;
+            width: min-content;
         }
         &__check{
             @include icons('Free', 20px, 600);
