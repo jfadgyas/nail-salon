@@ -96,6 +96,29 @@
           transform: rotateZ(90deg);
 }
 
+@media only screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
 body {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0)), to(white)), url("../tmp/stacks_image_468.0.0.0.0.jpg");
