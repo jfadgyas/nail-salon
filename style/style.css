@@ -397,4 +397,10 @@ a {
     margin: 2em;
   }
 }
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+  .footer {
+    margin: 2.5em;
+  }
+}
 /*# sourceMappingURL=style.css.map */
