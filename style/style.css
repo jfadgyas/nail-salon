@@ -384,10 +384,6 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .container__right {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
   .container__left--hero {
     max-height: 100vh;
     height: -webkit-fill-available;
