@@ -110,8 +110,8 @@
             justify-content: center;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    position: relative;
     width: 100%;
+    height: auto;
     margin: 0;
     padding-top: 0;
     top: 0;
