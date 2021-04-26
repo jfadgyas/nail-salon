@@ -110,13 +110,16 @@
             justify-content: center;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    position: fixed;
     width: 100%;
     height: auto;
     margin: 0;
     padding-top: 0;
     top: 0;
     left: 0;
+  }
+  __item {
+    position: fixed;
+    top: 0;
   }
 }
 
