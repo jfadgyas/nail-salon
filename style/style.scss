@@ -248,7 +248,7 @@ a{
         &__left--hero{
             height: stretch;
             // height: -moz-available;
-            // height: -webkit-fill-available;
+            height: -webkit-fill-available;
         }
         // justify-content: space-evenly;
         &__photo{
