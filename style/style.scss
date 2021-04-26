@@ -245,9 +245,10 @@ a{
 
 @media only screen and (min-width: 768px){
     .container{
-        &__left--hero{
-            height: 100vh;
-            height: -webkit-fill-available;
+        &__right{
+            height: stretch;
+            // height: -moz-available;
+            // height: -webkit-fill-available;
         }
         // justify-content: space-evenly;
         &__photo{
@@ -258,6 +259,6 @@ a{
     }
     .btn,
     .footer{
-        margin: 2em;
+        // margin: 2em;
     }
 }

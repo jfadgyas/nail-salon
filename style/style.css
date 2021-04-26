@@ -383,18 +383,15 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .container__left--hero {
-    height: 100vh;
+  .container__right {
     height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
   }
   .container__photo {
     margin: 2em;
     width: 200px;
     height: 200px;
-  }
-  .btn,
-  .footer {
-    margin: 2em;
   }
 }
 /*# sourceMappingURL=style.css.map */
