@@ -194,6 +194,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   width: 50vw;
   background: black;
 }
@@ -384,8 +385,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .container__left--hero {
-    height: -moz-available;
-    height: fill-available;
+    height: 100vh;
     height: -webkit-fill-available;
   }
   .container__photo {
@@ -394,7 +394,8 @@ a {
     height: 200px;
   }
   .footer {
-    margin-top: 3em;
+    position: absolute;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

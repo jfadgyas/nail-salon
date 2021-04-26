@@ -53,6 +53,7 @@ a{
     &__right{
         flex-direction: column;
         align-items: center;
+        position: relative;
         width: 50vw;
         background: black;
         &__price-cards{
@@ -246,7 +247,7 @@ a{
 @media only screen and (min-width: 768px){
     .container{
         &__left--hero{
-            height: fill-available;
+            height: 100vh;
             height: -webkit-fill-available;
         }
         // justify-content: space-evenly;
@@ -257,6 +258,7 @@ a{
         }
     }
     .footer{
-        margin-top: 3em;
+        position: absolute;
+        bottom: 0;
     }
 }
