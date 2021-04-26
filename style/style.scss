@@ -243,22 +243,23 @@ a{
     article:first-child{
         margin-top: 3em;
     }
-    .btn,
     .footer{
-        display: flex;
         margin: 2em;
     }
 }
 
 @media only screen 
-    and (orientation: landscape )
+    and (orientation: portrait )
     and (min-width: 768px){
-    .footer{
-            margin: 2.5em;
-    }
+        .container__photo{
+            margin: 2em;
+            width: 200px;
+            height: 200px;
+        }
+        .btn{
+            display: flex;
+        }
+        // .footer{
+        //     margin: 2.5em;
+        // }
 }
-// .container__photo{
-//     margin: 2em;
-//     width: 200px;
-//     height: 200px;
-// }
