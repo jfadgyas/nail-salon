@@ -246,8 +246,8 @@ a {
 
 .container__photo {
   margin: 1em;
-  width: 55%;
-  height: 100px;
+  width: 100px;
+  height: 55%;
   border: 2px solid white;
   border-radius: 50%;
 }
