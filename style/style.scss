@@ -244,8 +244,16 @@ a{
 }
 
 @media only screen and (min-width: 768px){
-    .container__photo{
-        width: 200px;
-        height: 200px;
+    .container{
+        // height: 100vh;
+        // justify-content: space-evenly;
+        &__photo{
+            margin: 2em;
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .footer{
+        margin-top: 3em;
     }
 }
