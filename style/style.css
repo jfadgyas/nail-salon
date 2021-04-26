@@ -384,11 +384,6 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .container__right {
-    height: -webkit-fill-available;
-    height: -moz-available;
-    height: stretch;
-  }
   .btn,
   .footer {
     display: -webkit-box;
