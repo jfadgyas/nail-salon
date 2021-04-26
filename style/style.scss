@@ -243,54 +243,9 @@ a{
     background-color: black;
 }
 
-// .feature{
-//     justify-content: center; //for flex on the page
-//     display: grid;
-//     grid-template-columns: 80%;
-//     grid-gap: 1em;
-//     text-align: center;
-//     &__cards{
-//         margin: 2em 0;
-//         border-top-width: 6px;
-//         border-top-style: solid;
-//         &:nth-child(1){
-//             border-top-color: #f79f89;
-//             color: #f79f89;
-//             & :is(button){
-//                 background-color: #f79f89;
-//             }
-//         }
-//         &:nth-child(2){
-//             border-top-color: #a01fdb;
-//             color: #a01fdb;
-//             & :is(button){
-//                 background-color: #a01fdb;
-//             }
-//         }
-//         &:nth-child(3){
-//             border-top-color: #fd4bb3;//#f52664;
-//             color: #fd4bb3;
-//             & :is(button){
-//                 background-color: #fd4bb3;
-//             }
-//         }
-//     }
-//     &__title{
-//         text-transform: uppercase;
-//     }
-//     &__desc{
-//         color:rgb(117, 109, 109);
-//     }
-//     &__btn{
-//         text-transform: uppercase;
-//         text-align: center;
-//         color: #ece2df;
-//         border: none;
-//         border-radius: 3px;
-//         padding: 0.5em 1em;
-//     }
-//     &__img{
-//         width: 100%;
-//         height: 200px;
-//     }
-// }
+@media only screen and (min-width: 768px){
+    .container__photo{
+        width: 200px;
+        height: 200px;
+    }
+}
