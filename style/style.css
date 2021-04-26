@@ -385,6 +385,9 @@ a {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
+  article:first-child {
+    margin-top: 3em;
+  }
   .container__photo {
     margin: 2em;
     width: 200px;

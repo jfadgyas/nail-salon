@@ -242,13 +242,13 @@ a{
 @media only screen 
     and (orientation: portrait)
     and (min-width: 768px){
-    .container{
-        // margin-top: 1.5em;
-        &__photo{
-            margin: 2em;
-            width: 200px;
-            height: 200px;
-        }
+    article:first-child{
+        margin-top: 3em;
+    }
+    .container__photo{
+        margin: 2em;
+        width: 200px;
+        height: 200px;
     }
     .btn,
     .footer{
