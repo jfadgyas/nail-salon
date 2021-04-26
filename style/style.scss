@@ -239,16 +239,9 @@ a{
     background-color: black;
 }
 
-@media only screen 
-    and (orientation: portrait)
-    and (min-width: 768px){
+@media only screen and (min-width: 768px){
     article:first-child{
         margin-top: 3em;
-    }
-    .container__photo{
-        margin: 2em;
-        width: 200px;
-        height: 200px;
     }
     .btn,
     .footer{
@@ -264,3 +257,8 @@ a{
             margin: 2.5em;
     }
 }
+// .container__photo{
+//     margin: 2em;
+//     width: 200px;
+//     height: 200px;
+// }
