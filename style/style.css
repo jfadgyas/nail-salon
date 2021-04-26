@@ -246,8 +246,8 @@ a {
 
 .container__photo {
   margin: 1em;
-  width: 100px;
-  height: 100px;
+  width: 55%;
+  height: 55%;
   border: 2px solid white;
   border-radius: 50%;
 }
@@ -388,11 +388,6 @@ a {
     height: -webkit-fill-available;
     height: -moz-available;
     height: stretch;
-  }
-  .container__photo {
-    margin: 2em;
-    width: 200px;
-    height: 200px;
   }
   .btn,
   .footer {
