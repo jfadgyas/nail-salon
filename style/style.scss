@@ -98,9 +98,9 @@ a{
     &__photo{
         margin: 1em;
         width: 100px;
-        height: 55%;
+        height: 100px;
         border: 2px solid white;
-        // border-radius: 50%;
+        border-radius: 50%;
     }
 
     // &__scroll{
@@ -240,16 +240,16 @@ a{
 }
 
 @media only screen and (min-width: 768px){
-    // .container{
-    //     &__right{
-    //         height: stretch;
-    //     }
-    //     // &__photo{
-    //     //     margin: 2em;
-    //     //     width: 200px;
-    //     //     height: 200px;
-    //     // }
-    // }
+    .container{
+        &__right{
+            height: stretch;
+        }
+        &__photo{
+            margin: 2em;
+            width: 200px;
+            height: 200px;
+        }
+    }
     .btn,
     .footer{
         display: flex;

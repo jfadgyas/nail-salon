@@ -247,8 +247,9 @@ a {
 .container__photo {
   margin: 1em;
   width: 100px;
-  height: 55%;
+  height: 100px;
   border: 2px solid white;
+  border-radius: 50%;
 }
 
 .btn {
@@ -383,6 +384,16 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
+  .container__right {
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
+  }
+  .container__photo {
+    margin: 2em;
+    width: 200px;
+    height: 200px;
+  }
   .btn,
   .footer {
     display: -webkit-box;
