@@ -253,6 +253,7 @@ a {
 }
 
 .btn {
+  display: none;
   padding: 0.5em;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(255, 255, 255, 0.1)), to(rgba(247, 230, 230, 0.5)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1) 50%, rgba(247, 230, 230, 0.5));
@@ -384,8 +385,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .container__left--hero {
-    height: -moz-available;
-    height: stretch;
+    max-height: 100vh;
     height: -webkit-fill-available;
   }
   .container__photo {
@@ -395,6 +395,9 @@ a {
   }
   .btn,
   .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 2em;
   }
 }

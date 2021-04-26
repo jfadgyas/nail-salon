@@ -131,16 +131,12 @@ a{
 }
 
 .btn{
-    // width: 220px;
-    // height: 180px;
+    display: none;
     padding: 0.5em;
-    // box-shadow: 1px 2px 3px rgba(247, 230, 230, $text-opacity--end);
     background: linear-gradient(to right bottom, rgba(255,255,255, 0.1) 50%, rgba(247, 230, 230, $text-opacity--end));
     background-position: left;
     background-size: 200%;
     backdrop-filter: blur(0.2em);
-    // border: none;
-    // border same as glasbackground
     border-style: solid;
     border-width: 1px;
     border-top-color: rgba(255,255,255,0.2);
@@ -246,11 +242,9 @@ a{
 @media only screen and (min-width: 768px){
     .container{
         &__left--hero{
-            height: stretch;
-            // height: -moz-available;
+            max-height: 100vh;
             height: -webkit-fill-available;
         }
-        // justify-content: space-evenly;
         &__photo{
             margin: 2em;
             width: 200px;
@@ -259,6 +253,7 @@ a{
     }
     .btn,
     .footer{
+        display: flex;
         margin: 2em;
     }
 }
