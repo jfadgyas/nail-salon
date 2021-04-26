@@ -384,8 +384,10 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .container__left {
+  .container__right {
     height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
   }
   .container__photo {
     margin: 2em;

@@ -241,8 +241,8 @@ a{
 
 @media only screen and (min-width: 768px){
     .container{
-        &__left{
-            height: -webkit-fill-available;
+        &__right{
+            height: stretch;
         }
         &__photo{
             margin: 2em;
