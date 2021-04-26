@@ -242,7 +242,7 @@ a{
 @media only screen and (min-width: 768px){
     .container{
         &__left--hero{
-            max-height: 100vh;
+            // max-height: 100vh;
             height: -webkit-fill-available;
         }
         &__photo{

@@ -385,7 +385,6 @@ a {
 
 @media only screen and (min-width: 768px) {
   .container__left--hero {
-    max-height: 100vh;
     height: -webkit-fill-available;
   }
   .container__photo {
