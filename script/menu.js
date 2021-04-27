@@ -9,7 +9,9 @@ const options = {
 }
 const menuObserver = new IntersectionObserver(function(entries) {
     entries.map(function(entry) {
-        const index = pageContent.findIndex(item => item.id == entry.target.id)
+        const index = pageContent.findIndex(function(item){
+            return item.id == entry.target.id
+        })
         if (entry.isIntersecting){
             return menu.children[index].classList.add('active')
         }
