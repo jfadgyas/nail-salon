@@ -8,7 +8,7 @@ const options = {
     rootMargin: '0px 0px -10% 0px'
 }
 const menuObserver = new IntersectionObserver(function(entries) {
-    entries.map(entry => {
+    entries.map(function(entry) {
         const index = pageContent.findIndex(item => item.id == entry.target.id)
         if (entry.isIntersecting){
             return menu.children[index].classList.add('active')
