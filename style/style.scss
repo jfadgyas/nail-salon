@@ -240,8 +240,12 @@ a{
 }
 
 @media only screen and (min-width: 768px){
-    article:first-child{
-        margin-top: 3em;
+    // article:first-child
+    .container{
+        &__left,
+        &__right{
+            margin-top: 3em;
+        }
     }
     .footer{
         margin: 2em;
@@ -251,16 +255,17 @@ a{
 @media only screen 
     and (orientation: portrait )
     and (min-width: 768px){
-        .container__photo{
-            margin: 2em;
-            width: 200px;
-            height: 200px;
-        }
-        .btn{
-            display: flex;
-            margin: 2em;
-        }
-        // .footer{
-        //     margin: 2.5em;
-        // }
+    .container__photo{
+        margin: 2em;
+        width: 200px;
+        height: 200px;
+    }
+    .btn{
+        display: flex;
+        margin: 2em;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
 }

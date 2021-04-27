@@ -42,7 +42,8 @@
         background-position: right;
         font-size: 18px;
         transition: 500ms;
-        &:hover{
+        &:hover,
+        &.active{
             border-bottom: 1px solid $text-color;
             background-position: left;
         }
