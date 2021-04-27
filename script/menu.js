@@ -7,11 +7,7 @@ const options = {
     threshold: 0.75,
     rootMargin: '0px 0px -10% 0px'
 }
-const menuObserver = new IntersectionObserver(entries => activateMenuItem(entries), options)
-
-// Function
-// toggle active menu item
-const activateMenuItem = entries => {
+const menuObserver = new IntersectionObserver(function(entries) {
     entries.map(entry => {
         const index = pageContent.findIndex(item => item.id == entry.target.id)
         if (entry.isIntersecting){
@@ -19,7 +15,7 @@ const activateMenuItem = entries => {
         }
         menu.children[index].classList.remove('active')
     })
-}
+}, options)
 
 // Listeners
 hamburger.addEventListener('click', function openMenu(){
