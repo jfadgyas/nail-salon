@@ -30,7 +30,7 @@ document.addEventListener('click', function closeMenu(e){
     }
 })
 
-pageContent.map(item => {
+pageContent.map(function(item){
     menuObserver.observe(item)
 })
 
