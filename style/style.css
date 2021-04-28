@@ -394,16 +394,27 @@ a {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
+  .container__right {
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
+  }
   .container__photo {
     margin: 2em;
-    width: 50%;
-    height: 50%;
+    width: 200px;
+    height: 200px;
   }
   .btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 2em;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .container__logo {
+    margin-bottom: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */

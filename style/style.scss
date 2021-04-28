@@ -18,7 +18,7 @@ a{
 .container{
     display: flex;
     &__left{
-        width: 50vw;
+        width: 50vw;// %?
         &--hero{
             background: url('../tmp/bg-new.jpg');
             background-position: 75%;    
@@ -240,7 +240,6 @@ a{
 }
 
 @media only screen and (min-width: 768px){
-    // article:first-child
     .container{
         &__left,
         &__right{
@@ -253,12 +252,15 @@ a{
 }
 
 @media only screen 
-    and (orientation: portrait )
+    and (orientation: portrait)
     and (min-width: 768px){
+    .container__right{
+        height: stretch;
+    }
     .container__photo{
         margin: 2em;
-        width: 50%;
-        height: 50%;
+        width: 200px;
+        height: 200px;
     }
     .btn{
         display: flex;
@@ -266,6 +268,8 @@ a{
     }
 }
 
-@media only screen and (min-width: 1024px){
-
+@media only screen and (min-width: 834px){
+    .container__logo{
+        margin-bottom: 10%;
+    }
 }

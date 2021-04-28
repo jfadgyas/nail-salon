@@ -9,7 +9,6 @@ const options = {
 }
 const menuObserver = new IntersectionObserver(function(entries) {
     entries.map(function(entry) {
-        console.log(entry)
         const index = pageContent.findIndex(function(item){
             return item.id == entry.target.id
         })
