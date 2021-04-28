@@ -196,7 +196,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 50vw;
-  background: black;
 }
 
 .container__right--about {
@@ -207,7 +206,6 @@ a {
 .container__right__price-cards {
   margin: 0;
   padding: 0;
-  width: 100%;
   text-align: center;
 }
 
@@ -428,8 +426,33 @@ a {
 }
 
 @media only screen and (min-width: 834px) {
+  .container__right--about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1.5em;
+    margin: 0;
+    margin-top: 1.5em;
+  }
+  .container__text {
+    margin-top: 0;
+  }
   .footer {
     margin-bottom: 0;
+  }
+  #prices .container__right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container__right__price-cards {
+    width: 50%;
+    margin: 0;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -54,7 +54,7 @@ a{
         flex-direction: column;
         align-items: center;
         width: 50vw;
-        background: black;
+        // background: black;
         &--about{
             width: 100%;
             margin: 1em;
@@ -62,7 +62,7 @@ a{
         &__price-cards{
             margin: 0;
             padding: 0;
-            width: 100%;
+            // width: 100%;
             text-align: center;
         }
     }
@@ -282,18 +282,36 @@ a{
 }
 
 @media only screen and (min-width: 834px){
-    // .container__left--about{
-    //     display: none;
-    // }
-    // #about .container{
-    //     margin: 0;
-    //     width: 100%;
-    //     flex-direction: row;
-    //     &__text{
-    //         margin: 1.5em 1.7em;
-    //     }
-    // }
+    .container__right--about{
+        flex-direction: row;
+        gap: 1.5em;
+        margin: 0;
+        margin-top: 1.5em;
+    }
+    .container__text{
+        margin-top: 0;
+        // &--motto,
+        // &--price-list{
+        //     margin: 0;
+        //     padding: 0;
+        // }
+    }
     .footer{
         margin-bottom: 0;
+    }
+
+    #prices .container__right{
+        flex-direction: row;
+        flex-wrap: wrap;
+        // flex-basis: 20%;
+        // flex-grow: 1;
+        // flex-shrink: 2;
+        // width: 100%;
+    }
+    .container__right__price-cards{
+        // border: 1px solid aquamarine;
+        width: 50%;
+        margin: 0;
+        padding: 0;
     }
 }
