@@ -415,4 +415,10 @@ a {
     margin: auto 1em;
   }
 }
+
+@media only screen and (max-width: 834px) {
+  body {
+    background: red;
+  }
+}
 /*# sourceMappingURL=style.css.map */
