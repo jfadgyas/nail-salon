@@ -397,7 +397,7 @@ a {
   .container__photo {
     margin: 2em;
     width: 50%;
-    height: 200px;
+    height: 50%;
   }
   .btn {
     display: -webkit-box;
