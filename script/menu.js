@@ -4,11 +4,12 @@ const menu = document.querySelector('.menu')
 const pageContent = Array.from(document.querySelectorAll('article'))
 const options = {
     root: null,
-    threshold: 0.75,
-    rootMargin: '0px 0px -10% 0px'
+    rootMargin: '0px 0px -40% 0px',
+    threshold: 0.22
 }
 const menuObserver = new IntersectionObserver(function(entries) {
     entries.map(function(entry) {
+        console.log(entry)
         const index = pageContent.findIndex(function(item){
             return item.id == entry.target.id
         })
