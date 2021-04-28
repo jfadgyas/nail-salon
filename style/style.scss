@@ -246,7 +246,7 @@ a{
             margin-top: 3em;
         }
         &__logo{
-            width: 50%;
+            width: calc(50vw - 25%);
         }
     }
     .footer{
