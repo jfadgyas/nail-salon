@@ -391,6 +391,9 @@ a {
   .container__logo {
     width: calc(50vw - 25%);
   }
+  .container__text {
+    margin: auto 1em;
+  }
   .footer {
     margin: 2em;
   }
@@ -411,12 +414,6 @@ a {
 }
 
 @media only screen and (min-width: 834px) {
-  .container__text {
-    margin: auto 1em;
-  }
-}
-
-@media only screen and (max-width: 834px) {
   .container__left--about {
     display: none;
   }
