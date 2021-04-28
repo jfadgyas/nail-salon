@@ -396,7 +396,7 @@ a {
   }
 }
 
-@media only screen and (orientation: portrait) and (min-width: 768px) {
+@media only screen and (orientation: portrait) and (max-width: 768px) {
   .container__photo {
     margin: 2em;
     width: 200px;
@@ -411,17 +411,11 @@ a {
 }
 
 @media only screen and (min-width: 834px) {
-  .container__logo {
-    margin-bottom: 10%;
+  body {
+    background: red;
   }
   .container__text {
     margin: auto 1em;
-  }
-}
-
-@media only screen and (orientation: landscape) {
-  body {
-    background: red;
   }
 }
 /*# sourceMappingURL=style.css.map */
