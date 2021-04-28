@@ -389,6 +389,15 @@ a {
   background-color: black;
 }
 
+@media only screen and (orientation: landscape) {
+  .container__right--about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .container__left, .container__right {
     margin-top: 3em;
@@ -419,20 +428,6 @@ a {
 }
 
 @media only screen and (min-width: 834px) {
-  .container__left--about {
-    display: none;
-  }
-  #about .container {
-    margin: 0;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  #about .container__text {
-    margin: 1.5em 1.7em;
-  }
   .footer {
     margin-bottom: 0;
   }

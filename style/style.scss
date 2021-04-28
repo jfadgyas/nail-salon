@@ -243,6 +243,12 @@ a{
     background-color: black;
 }
 
+@media only screen and (orientation: landscape){
+    .container__right--about{
+        flex-direction: row;
+    }
+}
+
 @media only screen and (min-width: 768px){
     .container{
         &__left,
@@ -276,17 +282,17 @@ a{
 }
 
 @media only screen and (min-width: 834px){
-    .container__left--about{
-        display: none;
-    }
-    #about .container{
-        margin: 0;
-        width: 100%;
-        flex-direction: row;
-        &__text{
-            margin: 1.5em 1.7em;
-        }
-    }
+    // .container__left--about{
+    //     display: none;
+    // }
+    // #about .container{
+    //     margin: 0;
+    //     width: 100%;
+    //     flex-direction: row;
+    //     &__text{
+    //         margin: 1.5em 1.7em;
+    //     }
+    // }
     .footer{
         margin-bottom: 0;
     }
