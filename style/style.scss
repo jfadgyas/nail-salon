@@ -255,7 +255,7 @@ a{
 }
 
 @media only screen 
-    and (orientation: portrait)
+    // and (orientation: portrait)
     and (max-width: 768px){
     .container__photo{
         margin: 2em;
@@ -269,16 +269,8 @@ a{
 }
 
 @media only screen and (min-width: 834px){
-    body{
-        background: red;
-    }
-    .container{
-        &__logo{
-            // margin-bottom: 10%;
-        }
-        &__text{
-            margin: auto 1em;
-        }
+    .container__text{
+        margin: auto 1em;
     }
 }
 
