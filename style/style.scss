@@ -245,6 +245,9 @@ a{
         &__right{
             margin-top: 3em;
         }
+        &__logo{
+            width: 50%;
+        }
     }
     .footer{
         margin: 2em;
@@ -254,9 +257,6 @@ a{
 @media only screen 
     and (orientation: portrait)
     and (min-width: 768px){
-    .container__right{
-        height: stretch;
-    }
     .container__photo{
         margin: 2em;
         width: 200px;
@@ -268,8 +268,18 @@ a{
     }
 }
 
-@media only screen and (min-width: 834px){
-    .container__logo{
-        margin-bottom: 10%;
+@media only screen
+    and (min-width: 834px){
+    body{
+        background: red;
+    }
+    .container{
+        &__logo{
+            width: 50%;
+            margin-bottom: 10%;
+        }
+        &__text{
+            margin: 1em;
+        }
     }
 }
