@@ -55,6 +55,10 @@ a{
         align-items: center;
         width: 50vw;
         background: black;
+        &--about{
+            width: 100%;
+            margin: 1em;
+        }
         &__price-cards{
             margin: 0;
             padding: 0;

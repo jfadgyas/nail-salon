@@ -199,6 +199,11 @@ a {
   background: black;
 }
 
+.container__right--about {
+  width: 100%;
+  margin: 1em;
+}
+
 .container__right__price-cards {
   margin: 0;
   padding: 0;
