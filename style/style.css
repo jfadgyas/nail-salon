@@ -396,7 +396,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (orientation: portrait) and (device-width: 768px) {
   .container__photo {
     margin: 2em;
     width: 200px;
