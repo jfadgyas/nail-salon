@@ -417,8 +417,22 @@ a {
 }
 
 @media only screen and (max-width: 834px) {
-  body {
-    background: red;
+  .container__left--about {
+    display: none;
+  }
+  #about .container {
+    margin: 0;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #about .container__text {
+    margin: 1.5em 1.7em;
+  }
+  .footer {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

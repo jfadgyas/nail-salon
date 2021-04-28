@@ -268,15 +268,25 @@ a{
     }
 }
 
-@media only screen 
-    and (min-width: 834px){
+@media only screen and (min-width: 834px){
     .container__text{
         margin: auto 1em;
     }
 }
 
 @media only screen and (max-width: 834px){
-    body{
-        background: red;
+    .container__left--about{
+        display: none;
+    }
+    #about .container{
+        margin: 0;
+        width: 100%;
+        flex-direction: row;
+        &__text{
+            margin: 1.5em 1.7em;
+        }
+    }
+    .footer{
+        margin-bottom: 0;
     }
 }
