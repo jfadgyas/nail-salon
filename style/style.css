@@ -411,15 +411,17 @@ a {
 }
 
 @media only screen and (min-width: 834px) {
-  body {
-    background: red;
-  }
   .container__logo {
-    width: 50%;
     margin-bottom: 10%;
   }
   .container__text {
-    margin: 1em;
+    margin: auto 1em;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    background: red;
   }
 }
 /*# sourceMappingURL=style.css.map */

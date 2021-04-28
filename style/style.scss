@@ -268,18 +268,19 @@ a{
     }
 }
 
-@media only screen
-    and (min-width: 834px){
-    body{
-        background: red;
-    }
+@media only screen and (min-width: 834px){
     .container{
         &__logo{
-            width: 50%;
             margin-bottom: 10%;
         }
         &__text{
-            margin: 1em;
+            margin: auto 1em;
         }
+    }
+}
+
+@media only screen and (orientation: landscape){
+    body{
+        background: red;
     }
 }
