@@ -452,6 +452,8 @@ a {
     margin-top: 0;
   }
   .container__photo {
+    width: 200px;
+    height: 200px;
     width: 35%;
     height: 35%;
   }
