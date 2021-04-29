@@ -250,8 +250,8 @@ a {
 
 .container__photo {
   margin: 1em;
-  width: 100px;
-  height: 100px;
+  width: 55%;
+  height: auto;
   border: 2px solid white;
   border-radius: 50%;
 }
@@ -394,6 +394,9 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .container__photo {
+    width: 35%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -414,8 +417,6 @@ a {
 @media only screen and (orientation: portrait) and (device-width: 768px) {
   .container__photo {
     margin: 2em;
-    width: 200px;
-    height: 200px;
   }
   .btn {
     display: -webkit-box;
@@ -450,12 +451,6 @@ a {
   }
   .container__right__text {
     margin-top: 0;
-  }
-  .container__photo {
-    width: 200px;
-    height: 200px;
-    width: 35%;
-    height: 35%;
   }
   .footer {
     margin-bottom: 0;

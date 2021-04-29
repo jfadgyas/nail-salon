@@ -101,37 +101,11 @@ a{
     }
     &__photo{
         margin: 1em;
-        width: 100px;
-        height: 100px;
+        width: 55%;
+        height: auto;
         border: 2px solid white;
         border-radius: 50%;
     }
-
-    // &__scroll{
-    //     //icons
-    //     font-style: normal;
-    //     font-variant: normal;
-    //     text-rendering: auto;
-    //     -webkit-font-smoothing: antialiased;
-    //     font-family: "Font Awesome 5 Free";
-    //     font-size: 3em;
-    //     font-weight: 600;
-    //     color:rgba(160, 31, 219, 0.5);
-    //     cursor: pointer;
-    //     &--left::before,
-    //     &--right::after{
-    //         position: absolute;
-    //         top: 50%;
-    //     }
-    //     &--left::before{
-    //         content: '\f137';
-    //         left: 0.5em;
-    //     }
-    //     &--right::after{
-    //         content: '\f138';
-    //         right: 0.5em;
-    //     }
-    // }
 }
 
 .btn{
@@ -247,6 +221,9 @@ a{
     .container__right--about{
         flex-direction: row;
     }
+    .container__photo{
+        width: 35%;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -272,8 +249,8 @@ a{
     and (device-width: 768px){
     .container__photo{
         margin: 2em;
-        width: 200px;
-        height: 200px;
+        // width: 200px;
+        // height: 200px;
     }
     .btn{
         display: flex;
@@ -302,12 +279,12 @@ a{
             margin-top: 0;
         }
     }
-    .container__photo{
-        width: 200px;
-        height: 200px;
-        width: 35%;
-        height: 35%;
-    } 
+    // .container__photo{
+    //     width: 200px;
+    //     height: 200px;
+    //     width: 35%;
+    //     height: 35%;
+    // } 
     .footer{
         margin-bottom: 0;
     }
