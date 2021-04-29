@@ -435,13 +435,7 @@ a {
     margin: 0;
     margin-top: 1.5em;
   }
-  .container__text {
-    margin-top: 0;
-  }
-  .footer {
-    margin-bottom: 0;
-  }
-  #prices .container__right {
+  .container__right--prices {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -453,6 +447,31 @@ a {
     width: 50%;
     margin: 0;
     padding: 0;
+  }
+  .container__right__text {
+    margin-top: 0;
+  }
+  .container__photo {
+    width: 35%;
+    height: 35%;
+  }
+  .footer {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container__right--about {
+    gap: 2em;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em;
   }
 }
 /*# sourceMappingURL=style.css.map */
