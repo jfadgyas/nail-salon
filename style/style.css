@@ -453,6 +453,9 @@ a {
   .container__right--about {
     gap: 2em;
   }
+  .container__text--motto {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (min-width: 1112px) {

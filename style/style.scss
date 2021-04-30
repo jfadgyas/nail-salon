@@ -18,7 +18,7 @@ a{
 .container{
     display: flex;
     &__left{
-        width: 50vw;// %?
+        width: 50vw;
         &--hero{
             background: url('../tmp/bg-new.jpg');
             background-position: 75%;    
@@ -289,6 +289,9 @@ a{
         &--about{
             gap: 2em;
         }
+    }
+    .container__text--motto{
+        font-size: 12px;
     }
 }
 
