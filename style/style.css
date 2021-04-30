@@ -406,6 +406,11 @@ a {
   .container__left, .container__right {
     margin-top: 3em;
   }
+  .container__right {
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: stretch;
+  }
   .container__logo {
     width: calc(50vw - 25%);
   }
