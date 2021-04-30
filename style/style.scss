@@ -221,8 +221,8 @@ a{
     .container__right{
         &--about{
             flex-direction: row;
-            justify-content: center;
             align-items: flex-start;
+            // flex-basis: 50%;
             gap: 1.5em;
             margin: 0;
             // margin-top: 1.5em;
@@ -243,7 +243,7 @@ a{
             width: calc(50vw - 25%);
         }
         &__text{
-            margin: auto 1em;
+            margin: 0 1em;
         }
     }
     .footer{
@@ -271,16 +271,7 @@ a{
             margin: 0;
             padding: 0;
         }
-        // &__text{
-        //     margin-top: 0;
-        // }
-    }
-    // .container__photo{
-    //     width: 200px;
-    //     height: 200px;
-    //     width: 35%;
-    //     height: 35%;
-    // } 
+    } 
     .footer{
         margin-bottom: 0;
     }
