@@ -221,6 +221,7 @@ a{
     .container__right{
         &--about{
             flex-direction: row;
+            justify-content: center;
             align-items: flex-start;
             gap: 1.5em;
             margin: 0;
