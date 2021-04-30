@@ -388,7 +388,7 @@ a {
   background-color: black;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-height: 834px) {
   .container__right--about {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
