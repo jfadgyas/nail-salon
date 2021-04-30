@@ -398,7 +398,7 @@ a {
     margin-top: 1.5em;
   }
   .container__photo {
-    width: 40%;
+    width: 35%;
   }
 }
 
@@ -417,7 +417,7 @@ a {
   }
 }
 
-@media only screen and (orientation: portrait) and (device-width: 768px) {
+@media only screen and (orientation: portrait) and (min-width: 768px) {
   .btn {
     display: -webkit-box;
     display: -ms-flexbox;

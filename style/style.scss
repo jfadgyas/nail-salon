@@ -227,7 +227,7 @@ a{
         }
     }
     .container__photo{
-        width: 40%;
+        width: 35%;
     }
 }
 
@@ -251,7 +251,7 @@ a{
 
 @media only screen 
     and (orientation: portrait)
-    and (device-width: 768px){
+    and (min-width: 768px){
     // .container__photo{
     //     margin: 2em;
     // }
