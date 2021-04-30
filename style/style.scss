@@ -218,16 +218,8 @@ a{
 }
 
 @media only screen 
-    and (orientation: landscape){
-    .container__right{
-        &--about{
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 1.5em;
-            margin: 0;
-            // margin-top: 1.5em;
-        }
-    }
+    and (orientation: landscape)
+    and (max-height: 834px){
     .container__photo{
         width: 25%;
     }
@@ -238,6 +230,14 @@ a{
         &__left,
         &__right{
             margin-top: 3em;
+            margin-bottom: 2em;
+            &--about{
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 1.5em;
+                margin: 0;
+                margin-top: 1.5em;
+            }
         }
         &__logo{
             width: calc(50vw - 25%);
@@ -280,7 +280,10 @@ a{
             margin: 0;
             padding: 0;
         }
-    } 
+    }
+    .container__text{
+        line-height: 1.5;
+    }
     .footer{
         margin-bottom: 0;
     }
@@ -297,12 +300,12 @@ a{
     }
 }
 
-@media only screen and (min-width: 1112px){
-    .btn{
-        display: flex;
-        margin: 2em;
-    }
-}
+// @media only screen and (min-width: 1112px){
+//     .btn{
+//         display: flex;
+//         margin: 2em;
+//     }
+// }
 
 @media only screen and (min-width: 1200px){
     body{
