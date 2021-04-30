@@ -221,9 +221,10 @@ a{
     .container__right{
         &--about{
             flex-direction: row;
+            align-items: flex-start;
             gap: 1.5em;
             margin: 0;
-            margin-top: 1.5em;
+            // margin-top: 1.5em;
         }
     }
     .container__photo{
@@ -239,9 +240,6 @@ a{
         }
         &__logo{
             width: calc(50vw - 25%);
-        }
-        &__text{
-            margin: auto 1em;
         }
     }
     .footer{
@@ -269,16 +267,7 @@ a{
             margin: 0;
             padding: 0;
         }
-        &__text{
-            margin-top: 0;
-        }
     }
-    // .container__photo{
-    //     width: 200px;
-    //     height: 200px;
-    //     width: 35%;
-    //     height: 35%;
-    // } 
     .footer{
         margin-bottom: 0;
     }
@@ -299,5 +288,16 @@ a{
     .btn{
         display: flex;
         margin: 2em;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    body{
+        background: green;
+    }
+    .container__right{
+        &--about{
+            gap: 2.5em;
+        }
     }
 }
