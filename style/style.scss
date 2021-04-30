@@ -252,58 +252,55 @@ a{
 @media only screen 
     and (orientation: portrait)
     and (min-width: 768px){
-    // .container__photo{
-    //     margin: 2em;
-    // }
     .btn{
         display: flex;
         margin: 2em;
     }
 }
 
-// @media only screen and (min-width: 834px){
-//     .container__right{
-//         &--about{
-//             flex-direction: row;
-//             gap: 1.5em;
-//             margin: 0;
-//             margin-top: 1.5em;
-//         }
-//         &--prices{
-//             flex-direction: row;
-//             flex-wrap: wrap;
-//         }
-//         &__price-cards{
-//             width: 50%;
-//             margin: 0;
-//             padding: 0;
-//         }
-//         &__text{
-//             margin-top: 0;
-//         }
-//     }
-//     // .container__photo{
-//     //     width: 200px;
-//     //     height: 200px;
-//     //     width: 35%;
-//     //     height: 35%;
-//     // } 
-//     .footer{
-//         margin-bottom: 0;
-//     }
-// }
+@media only screen and (min-width: 834px){
+    .container__right{
+        // &--about{
+        //     flex-direction: row;
+        //     gap: 1.5em;
+        //     margin: 0;
+        //     margin-top: 1.5em;
+        // }
+        &--prices{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__price-cards{
+            width: 50%;
+            margin: 0;
+            padding: 0;
+        }
+        &__text{
+            margin-top: 0;
+        }
+    }
+    // .container__photo{
+    //     width: 200px;
+    //     height: 200px;
+    //     width: 35%;
+    //     height: 35%;
+    // } 
+    .footer{
+        margin-bottom: 0;
+    }
+}
 
-// @media only screen and (min-width: 1024px){
-//     .container__right{
-//         &--about{
-//             gap: 2em;
-//         }
-//     }
-// }
+@media only screen and (min-width: 1024px){
+    .container__right{
+        &--about{
+            gap: 2em;
+        }
+    }
+}
 
-// @media only screen and (min-width: 1112px){
-//     .btn{
-//         display: flex;
-//         margin: 2em;
-//     }
-// }
+@media only screen and (min-width: 1112px){
+    .btn{
+        display: flex;
+        margin: 2em;
+    }
+}

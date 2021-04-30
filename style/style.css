@@ -425,4 +425,41 @@ a {
     margin: 2em;
   }
 }
+
+@media only screen and (min-width: 834px) {
+  .container__right--prices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container__right__price-cards {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .container__right__text {
+    margin-top: 0;
+  }
+  .footer {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container__right--about {
+    gap: 2em;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em;
+  }
+}
 /*# sourceMappingURL=style.css.map */
