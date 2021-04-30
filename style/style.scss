@@ -218,8 +218,7 @@ a{
 }
 
 @media only screen 
-    and (orientation: landscape)
-    and (max-height: 834px){
+    and (orientation: landscape){
     .container__right{
         &--about{
             flex-direction: row;
@@ -255,6 +254,15 @@ a{
 @media only screen 
     and (orientation: portrait)
     and (min-width: 768px){
+    .btn{
+        display: flex;
+        margin: 2em;
+    }
+}
+
+@media only screen
+    and (orientation: landscape)
+    and (min-height: 769px){
     .btn{
         display: flex;
         margin: 2em;

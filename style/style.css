@@ -388,7 +388,7 @@ a {
   background-color: black;
 }
 
-@media only screen and (orientation: landscape) and (max-height: 834px) {
+@media only screen and (orientation: landscape) {
   .container__right--about {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -421,6 +421,15 @@ a {
 }
 
 @media only screen and (orientation: portrait) and (min-width: 768px) {
+  .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-height: 769px) {
   .btn {
     display: -webkit-box;
     display: -ms-flexbox;
