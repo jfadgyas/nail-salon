@@ -241,6 +241,9 @@ a{
         &__logo{
             width: calc(50vw - 25%);
         }
+        &__text{
+            margin: auto 1em;
+        }
     }
     .footer{
         margin: 0.5em;
@@ -267,7 +270,16 @@ a{
             margin: 0;
             padding: 0;
         }
+        // &__text{
+        //     margin-top: 0;
+        // }
     }
+    // .container__photo{
+    //     width: 200px;
+    //     height: 200px;
+    //     width: 35%;
+    //     height: 35%;
+    // } 
     .footer{
         margin-bottom: 0;
     }

@@ -412,6 +412,9 @@ a {
   .container__logo {
     width: calc(50vw - 25%);
   }
+  .container__text {
+    margin: auto 1em;
+  }
   .footer {
     margin: 0.5em;
   }
