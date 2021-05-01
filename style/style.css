@@ -609,7 +609,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1024px) and (min-height: 768px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   body {
     background: #add8e6;
   }
