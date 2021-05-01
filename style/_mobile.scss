@@ -40,16 +40,16 @@
 
 // iphone X/XS ios12
 @media only screen
-    and (min-width: 375px)
-    and (min-height: 812px){
+    and (width: 375px)
+    and (height: 812px){
         body{
             background: aquamarine;
         }
     }
 
 @media only screen
-    and (min-width: 812px)
-    and (min-height: 375px){
+    and (width: 812px)
+    and (height: 375px){
         body{
             background: aquamarine;
         }
