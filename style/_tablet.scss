@@ -2,9 +2,54 @@
 // portrait
 @media only screen
     and (min-width: 768px)
-    and (min-height: 1024px){
+    and (max-width: 1024px){
         body{
-            background: lightblue;
+            background: #add8e6;
+        }
+
+        .container{
+            &__left,
+            &__right{
+                margin-top: 3em;
+                margin-bottom: 2em;
+                &--about{
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 1.5em;
+                    margin: 0;
+                    margin-top: 1.5em;
+                }
+            }
+            
+            .container__right{
+                &--prices{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                &__price-cards{
+                    width: 50%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .footer{
+                margin-bottom: 0;
+            }
+
+            &__logo{
+                width: calc(50vw - 25%);
+            }
+            &__text{
+                margin: 0 1em;
+            }
+        }
+        .footer{
+            margin: 0.5em;
+        }
+
+        .btn{
+            display: flex;
+            margin: 2em;
         }
     }
 // landscape
@@ -12,22 +57,74 @@
     and (min-width: 1024px)
     and (min-height: 768px){
         body{
-            background: lightblue;
+            background: #add8e6;
+        }
+        .container__photo{
+            width: 25%;
         }
     }
+// both orientations
+/*
+@media only screen
+    and (min-width: 768px)
+    and (min-height: 768px){
+        .container{
+            &__left,
+            &__right{
+                margin-top: 3em;
+                margin-bottom: 2em;
+                &--about{
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 1.5em;
+                    margin: 0;
+                    margin-top: 1.5em;
+                }
+            }
+            
+            .container__right{
+                &--prices{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                &__price-cards{
+                    width: 50%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .footer{
+                margin-bottom: 0;
+            }
 
+            &__logo{
+                width: calc(50vw - 25%);
+            }
+            &__text{
+                margin: 0 1em;
+            }
+        }
+        .footer{
+            margin: 0.5em;
+        }
+    }
+*/
 // ipad pro 10.5"
 // portrait
 @media only screen
     and (min-width: 834px)
     and (min-height: 1112px){
-
+        body{
+            background: lightskyblue;
+        }
     }
 // landscape
 @media only screen
     and (min-width: 1112px)
     and (min-height: 834px){
-
+        body{
+            background: lightskyblue;
+        }
     }
 
 // ipad pro 12.9"
@@ -35,11 +132,15 @@
 @media only screen
     and (min-width: 1024px)
     and (min-height: 1366px){
-
+        body{
+            background: saddlebrown;
+        }
     }
 // landscape
 @media only screen
     and (min-width: 1366px)
     and (min-height: 1024px){
-
+        body{
+            background: saddlebrown;
+        }
     }

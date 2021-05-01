@@ -1,53 +1,72 @@
-// // iphone 6/7/8 ios11
-// // portrait
-// @media only screen
-//     and (min-width: 375px)
-//     and (min-height: 667px){
-//         body{
-//             background: red;
-//         }          
-//     }
-// // landscape
-// @media only screen
-//     and (min-width: 667px)
-//     and (min-height: 375px){
-//         body{
-//             background: red;
-//         }
-//     }
+// iphone 6/7/8 ios11
+@media only screen
+    and (min-width: 375px)
+    and (min-height: 667px){
+        body{
+            background: red;
+        }
+    }
 
-// // iphone 6/7/8 Plus ios11
-// // portrait
-// @media only screen
-//     and (min-width: 414px)
-//     and (min-height: 736px){
-//         body{
-//             background: orange;
-//         }
-//     }
-// // landscape
-// @media only screen
-//     and (min-width: 736px)
-//     and (min-height: 414px){
-//         body{
-//             background: orange;
-//         }
-//     }
+@media only screen
+    and (min-width: 667px)
+    and (min-height: 375px){
+        body{
+            background: red;
+        }
+        .container__photo{
+            width: 35%;
+        }
+    }
 
-// // iphone X/XS ios12
-// // portrait
-// @media only screen
-//     and (min-width: 375px)
-//     and (min-height: 812px){
-//         body{
-//             background: pink;
-//         }
-//     }
-// // landscape
-// @media only screen
-//     and (min-width: 812px)
-//     and (min-height: 375px){
-//         body{
-//             background: pink;
-//         }
-//     }
+// iphone 6/7/8 Plus ios11
+@media only screen
+    and (min-width: 414px)
+    and (min-height: 736px){
+        body{
+            background: orange;
+        }
+    }
+
+@media only screen
+    and (min-width: 736px)
+    and (min-height: 414px){
+        body{
+            background: orange;
+        }
+        .container__photo{
+            width: 42%;
+        }
+    }
+
+// iphone X/XS ios12
+@media only screen
+    and (min-width: 375px)
+    and (min-height: 812px){
+        body{
+            background: aquamarine;
+        }
+    }
+
+@media only screen
+    and (min-width: 812px)
+    and (min-height: 375px){
+        body{
+            background: aquamarine;
+        }
+        .container{
+            &__left,
+            &__right{
+                margin-top: 3em;
+                margin-bottom: 2em;
+            }
+            &__logo{
+                width: calc(50vw - 25%);
+            }
+            &__text{
+                margin: 0 1em;
+            }
+            &__photo{
+                width: 20%;
+            }
+        }
+    }
