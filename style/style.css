@@ -556,12 +556,6 @@ a {
   }
 }
 
-@media only screen and (max-height: 375px) and (orientation: landscape) {
-  body {
-    background: aquamarine;
-  }
-}
-
 @media only screen and (min-width: 768px) and (max-width: 1112px) {
   body {
     background: #add8e6;
@@ -612,6 +606,9 @@ a {
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   body {
     background: #add8e6;
+  }
+  .container__photo {
+    width: 25%;
   }
   .btn {
     display: none;
@@ -669,9 +666,12 @@ a {
   }
 }
 
-@media only screen and (min-width: 1112px) and (min-height: 834px) {
+@media only screen and (min-width: 1112px) and (orientation: landscape) {
   body {
     background: lightskyblue;
+  }
+  .container__photo {
+    width: 35%;
   }
 }
 
