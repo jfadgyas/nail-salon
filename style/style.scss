@@ -217,6 +217,7 @@ a{
     background-color: black;
 }
 
+/*
 @media only screen 
     and (orientation: landscape)
     and (max-height: 834px){
@@ -281,13 +282,17 @@ a{
             padding: 0;
         }
     }
-    .container__text{
-        line-height: 1.5;
-    }
     .footer{
         margin-bottom: 0;
     }
 }
+
+// @media only screen and (min-height: 1025px){
+//     .container__text{
+//         line-height: 1.5;
+//     }
+// } //???
+
 
 @media only screen and (min-width: 1024px){
     .container__right{
@@ -295,25 +300,56 @@ a{
             gap: 2em;
         }
     }
-    .container__text--motto{
-        font-size: 12px;
-    }
 }
 
-// @media only screen and (min-width: 1112px){
-//     .btn{
-//         display: flex;
-//         margin: 2em;
-//     }
-// }
-
-@media only screen and (min-width: 1200px){
-    body{
-        background: green;
-    }
+@media only screen and (min-width: 1025px){
     .container__right{
         &--about{
             gap: 2.5em;
         }
     }
+    .container__text{
+        line-height: 1.3em;
+    }
+    .container__text--price-list{
+        line-height: 1.8em;
+    }
 }
+
+@media only screen and (min-width: 1200px){
+    .container{
+        &__title{
+            font-size: 2.5em;
+        }
+        &__text{
+            margin: 0 2em;
+            font-size: 1.4em;
+            &--motto{
+                font-size: 12px;
+            }
+            &--price-list{
+                margin: 0 1em;
+                font-size: 16px;
+            }
+        }
+        &__photo{
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .btn{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    body{
+        background: rgb(73, 72, 72);
+    }
+
+}
+*/
+
+@import 'mobile';
+@import 'tablet';
+// @import 'desktop';
