@@ -520,42 +520,6 @@ a {
 
 }
 */
-@media only screen and (min-width: 375px) and (min-height: 667px) {
-  body {
-    background: red;
-  }
-}
-
-@media only screen and (min-width: 667px) and (min-height: 375px) {
-  body {
-    background: red;
-  }
-}
-
-@media only screen and (min-width: 414px) and (min-height: 736px) {
-  body {
-    background: orange;
-  }
-}
-
-@media only screen and (min-width: 736px) and (min-height: 414px) {
-  body {
-    background: orange;
-  }
-}
-
-@media only screen and (min-width: 375px) and (min-height: 812px) {
-  body {
-    background: pink;
-  }
-}
-
-@media only screen and (min-width: 812px) and (min-height: 375px) {
-  body {
-    background: pink;
-  }
-}
-
 @media only screen and (min-width: 768px) and (min-height: 1024px) {
   body {
     background: lightblue;
