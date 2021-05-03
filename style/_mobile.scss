@@ -1,7 +1,8 @@
 // iphone 6/7/8 ios11
 @media only screen
     and (min-width: 375px)
-    and (min-height: 667px){
+    and (min-height: 667px)
+    and (min-resolution: 2dppx){
         body{
             background: red;
         }
@@ -9,7 +10,8 @@
 
 @media only screen
     and (min-width: 667px)
-    and (min-height: 375px){
+    and (min-height: 375px)
+    and (min-resolution: 2dppx){
         body{
             background: red;
         }
@@ -21,7 +23,8 @@
 // iphone 6/7/8 Plus ios11
 @media only screen
     and (min-width: 414px)
-    and (min-height: 736px){
+    and (min-height: 736px)
+    and (min-resolution: 2dppx){
         body{
             background: orange;
         }
@@ -29,7 +32,8 @@
 
 @media only screen
     and (min-width: 736px)
-    and (min-height: 414px){
+    and (min-height: 414px)
+    and (min-resolution: 2dppx){
         body{
             background: orange;
         }
@@ -41,7 +45,8 @@
 // iphone X/XS ios12
 @media only screen
     and (min-width: 375px)
-    and (min-height: 812px){
+    and (min-height: 812px)
+    and (-webkit-device-pixel-ratio: 3){
         body{
             background: aquamarine;
         }

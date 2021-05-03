@@ -520,13 +520,103 @@ a {
 
 }
 */
-@media only screen and (min-width: 375px) and (min-height: 667px) {
+@media only screen and (min-width: 768px) {
+  body {
+    background: pink;
+  }
+  .container__left, .container__right {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+  .container__left--about, .container__right--about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.5em;
+    margin: 0;
+    margin-top: 1.5em;
+  }
+  .container__left--prices, .container__right--prices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container__left__price-cards, .container__right__price-cards {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .container__logo {
+    width: calc(50vw - 25%);
+  }
+  .container__text {
+    margin: 0 1em;
+  }
+  .footer {
+    margin-top: 20%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 768px) {
+  body {
+    background: plum;
+  }
+  .container__logo {
+    width: calc(50vw - 40%);
+  }
+  .container__text {
+    padding: 1.5em 2em 0 2em;
+    font-size: 1.2em;
+  }
+  .container__text--motto {
+    padding: 0 1em;
+    font-size: 12px;
+  }
+  .container__text--price-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5em;
+  }
+  .footer {
+    margin-top: 8%;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (min-height: 720px) {
+  body {
+    background: palevioletred;
+  }
+  .container__logo {
+    width: calc(50vw - 60%);
+  }
+  .container__photo {
+    width: 330px;
+  }
+  .container__right__price-cards {
+    padding-top: 2em;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (min-height: 1024px) {
+  body {
+    background: purple;
+  }
+}
+
+@media only screen and (min-width: 375px) and (min-height: 667px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 375px) and (min-height: 667px) and (min-resolution: 2dppx) {
   body {
     background: red;
   }
 }
 
-@media only screen and (min-width: 667px) and (min-height: 375px) {
+@media only screen and (min-width: 667px) and (min-height: 375px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 667px) and (min-height: 375px) and (min-resolution: 2dppx) {
   body {
     background: red;
   }
@@ -535,13 +625,13 @@ a {
   }
 }
 
-@media only screen and (min-width: 414px) and (min-height: 736px) {
+@media only screen and (min-width: 414px) and (min-height: 736px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 414px) and (min-height: 736px) and (min-resolution: 2dppx) {
   body {
     background: orange;
   }
 }
 
-@media only screen and (min-width: 736px) and (min-height: 414px) {
+@media only screen and (min-width: 736px) and (min-height: 414px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 736px) and (min-height: 414px) and (min-resolution: 2dppx) {
   body {
     background: orange;
   }
@@ -550,13 +640,13 @@ a {
   }
 }
 
-@media only screen and (min-width: 375px) and (min-height: 812px) {
+@media only screen and (min-width: 375px) and (min-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   body {
     background: aquamarine;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1112px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (resolution: 2dppx) {
   body {
     background: #add8e6;
   }
@@ -603,7 +693,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
   body {
     background: #add8e6;
   }
@@ -615,58 +705,13 @@ a {
   }
 }
 
-/*
-@media only screen
-    and (min-width: 768px)
-    and (min-height: 768px){
-        .container{
-            &__left,
-            &__right{
-                margin-top: 3em;
-                margin-bottom: 2em;
-                &--about{
-                    flex-direction: row;
-                    align-items: flex-start;
-                    gap: 1.5em;
-                    margin: 0;
-                    margin-top: 1.5em;
-                }
-            }
-            
-            .container__right{
-                &--prices{
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                }
-                &__price-cards{
-                    width: 50%;
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-            .footer{
-                margin-bottom: 0;
-            }
-
-            &__logo{
-                width: calc(50vw - 25%);
-            }
-            &__text{
-                margin: 0 1em;
-            }
-        }
-        .footer{
-            margin: 0.5em;
-        }
-    }
-*/
-@media only screen and (min-width: 834px) and (min-height: 1112px) {
+@media only screen and (min-width: 834px) and (min-height: 1112px) and (-webkit-device-pixel-ratio: 2) {
   body {
     background: lightskyblue;
   }
 }
 
-@media only screen and (min-width: 1112px) and (orientation: landscape) {
+@media only screen and (min-width: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
   body {
     background: lightskyblue;
   }
@@ -675,15 +720,53 @@ a {
   }
 }
 
-@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+@media only screen and (min-width: 1024px) and (min-height: 1366px) and (-webkit-device-pixel-ratio: 2) {
   body {
     background: saddlebrown;
   }
 }
 
-@media only screen and (min-width: 1366px) and (min-height: 1024px) {
+@media only screen and (min-width: 1366px) and (min-height: 835px) and (-webkit-device-pixel-ratio: 2) {
   body {
     background: saddlebrown;
+  }
+  .container__left, .container__right {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+  .container__left--about, .container__right--about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.5em;
+    margin: 0;
+    margin-top: 1.5em;
+  }
+  .container .container__right--prices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .container__right__price-cards {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .container__logo {
+    width: calc(50vw - 25%);
+  }
+  .container__text {
+    margin: 0 1em;
+  }
+  .footer {
+    margin-top: 3em;
   }
 }
 /*# sourceMappingURL=style.css.map */
