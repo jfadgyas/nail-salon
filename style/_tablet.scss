@@ -3,7 +3,7 @@
 @media only screen
     and (min-width: 768px)
     and (max-width: 1024px)
-    and (resolution: 2dppx){
+    and (-webkit-device-pixel-ratio: 2){
         body{
             background: #add8e6;
         }
