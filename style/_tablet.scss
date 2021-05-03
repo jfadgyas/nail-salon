@@ -3,51 +3,51 @@
 @media only screen
     and (min-width: 768px)
     and (max-width: 1024px)
-    // and (resolution: 2dppx)
+    and (resolution: 2dppx)
     and (-webkit-device-pixel-ratio: 2){
         body{
             background: green;//#add8e6;
         }
 
-        .container{
-            &__left,
-            &__right{
-                margin-top: 3em;
-                margin-bottom: 2em;
-                &--about{
-                    flex-direction: row;
-                    align-items: flex-start;
-                    gap: 1.5em;
-                    margin: 0;
-                    margin-top: 1.5em;
-                }
-            }
+        // .container{
+        //     &__left,
+        //     &__right{
+        //         margin-top: 3em;
+        //         margin-bottom: 2em;
+        //         &--about{
+        //             flex-direction: row;
+        //             align-items: flex-start;
+        //             gap: 1.5em;
+        //             margin: 0;
+        //             margin-top: 1.5em;
+        //         }
+        //     }
             
-            .container__right{
-                &--prices{
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                }
-                &__price-cards{
-                    width: 50%;
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-            // .footer{
-            //     margin-bottom: 0;
-            // }
+        //     .container__right{
+        //         &--prices{
+        //             flex-direction: row;
+        //             flex-wrap: wrap;
+        //         }
+        //         &__price-cards{
+        //             width: 50%;
+        //             margin: 0;
+        //             padding: 0;
+        //         }
+        //     }
+        //     // .footer{
+        //     //     margin-bottom: 0;
+        //     // }
 
-            &__logo{
-                width: calc(50vw - 25%);
-            }
-            &__text{
-                margin: 0 1em;
-            }
-        }
-        // .footer{
-        //     margin: 0.5em;
+        //     &__logo{
+        //         width: calc(50vw - 25%);
+        //     }
+        //     &__text{
+        //         margin: 0 1em;
+        //     }
         // }
+        // // .footer{
+        // //     margin: 0.5em;
+        // // }
 
         .btn{
             display: flex;

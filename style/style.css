@@ -646,44 +646,9 @@ a {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (resolution: 2dppx) and (-webkit-device-pixel-ratio: 2) {
   body {
     background: green;
-  }
-  .container__left, .container__right {
-    margin-top: 3em;
-    margin-bottom: 2em;
-  }
-  .container__left--about, .container__right--about {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 1.5em;
-    margin: 0;
-    margin-top: 1.5em;
-  }
-  .container .container__right--prices {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .container .container__right__price-cards {
-    width: 50%;
-    margin: 0;
-    padding: 0;
-  }
-  .container__logo {
-    width: calc(50vw - 25%);
-  }
-  .container__text {
-    margin: 0 1em;
   }
   .btn {
     display: -webkit-box;
