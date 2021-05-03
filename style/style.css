@@ -648,7 +648,7 @@ a {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (resolution: 2dppx) {
   body {
-    background: #add8e6;
+    background: green;
   }
   .container__left, .container__right {
     margin-top: 3em;
