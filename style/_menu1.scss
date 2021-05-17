@@ -2,6 +2,32 @@
 @import './icons';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&display=swap');
 
+html:lang(en) :not(:lang(en)),
+html:lang(nl) :not(:lang(nl)),
+html:lang(hu) :not(:lang(hu)){
+    display: none;
+}
+
+.lang-selector{
+    position: fixed;//absolute;
+    top: 1em;
+    left: 5em;
+    width: 3.5em;
+    height: 2em;
+    background: transparent;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $text-color;
+    border: none;
+    z-index: 2;
+}
+option{
+    background: black;
+}
+
 .hamburger{
     position: fixed;//absolute;
     top: 1em;
