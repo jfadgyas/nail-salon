@@ -5,19 +5,36 @@
 		<title>EmmiesBeautyCare</title>
 		<link rel="stylesheet" type='text/css' href="./style/style.css">
 		<script defer type='application/javascript' src='./script/menu.js'></script>
+		<script defer type='application/javascript' src='./script/gallery.js'></script>
 		<script defer type='application/javascript' src='./script/prices.js'></script>
 	</head>
 	<body tabIndex=0>
 		<header class='header'>
 			<nav>
 				<div id='hamburger' class='hamburger'></div>
-				<ul id='menu' class='menu'>
+				<ul lang='en' id='menu-en' class='menu'>
 					<li class='menu__item'><a class='menu__link' href='#hero'>home</a></li>
 					<li class='menu__item'><a class='menu__link' href='#about'>about</a></li>
 					<li class='menu__item'><a class='menu__link' href='#prices'>pricing</a></li>
-					<li class='menu__item'><a class='menu__link' href='#product'>products</a></li>
+					<li class='menu__item'><a class='menu__link' href='#gallery'>gallery</a></li>
 					<li class='menu__item'><a class='menu__link' href='#contact'>contact</a></li>
 					<li class='menu__item'><a class='menu__link' href='book.html'>book</a></li>
+				</ul>
+				<ul lang='nl' id='menu-nl' class='menu'>
+					<li class='menu__item'><a class='menu__link' href='#hero'>home</a></li>
+					<li class='menu__item'><a class='menu__link' href='#about'>over mij</a></li>
+					<li class='menu__item'><a class='menu__link' href='#prices'>prijzen</a></li>
+					<li class='menu__item'><a class='menu__link' href='#gallery'>galerij</a></li>
+					<li class='menu__item'><a class='menu__link' href='#contact'>contact</a></li>
+					<li class='menu__item'><a class='menu__link' href='book.html'>boek</a></li>
+				</ul>
+				<ul lang='hu' id='menu-hu' class='menu'>
+					<li class='menu__item'><a class='menu__link' href='#hero'>kezdőlap</a></li>
+					<li class='menu__item'><a class='menu__link' href='#about'>rólam</a></li>
+					<li class='menu__item'><a class='menu__link' href='#prices'>árak</a></li>
+					<li class='menu__item'><a class='menu__link' href='#gallery'>galéria</a></li>
+					<li class='menu__item'><a class='menu__link' href='#contact'>kapcsolat</a></li>
+					<li class='menu__item'><a class='menu__link' href='book.html'>foglalás</a></li>
 				</ul>
 			</nav>
 			<select id='lang-selector' class='lang-selector'>
@@ -55,8 +72,7 @@
 			
 			<!--About section-->
 			<article id='about' class='container'>
-				<!--<div class='container container__left container__left--about'>-->
-				</div>
+				<!--<div class='container container__left container__left--about'></div>-->
 				<div class='container container__right container__right--about'>					
 					<p lang='en' class='container__text'>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo natus eaque error. Nesciunt nulla, eligendi illo reiciendis molestiae nemo accusamus dolores officia esse officiis ad? Eius ipsum itaque cum vitae dolorum? Voluptas eveniet sunt omnis quisquam, iusto maiores blanditiis architecto, unde quo assumenda quos ea possimus sint dignissimos, ducimus at!
@@ -108,21 +124,20 @@
 				</div>
 			</article>
 			
-			<!--Product section-->
-			<article id='product' class='container'>
-				<div class='container container__left container__left--product'>
-				</div>
-				<div class='container container__right'>
-					<img class='container__logo' src='tmp/logo_01.png' alt='logo'/>
-					<h1 class='container__title'>Emmie's</h1>
-					<h2 class='container__title container__title--sub'>BeautyCare</h2>
-					<p class='container__text container__text--motto'>because your beauty worth my time</p>
-					<p class='container__text'>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo natus eaque error. Nesciunt nulla, eligendi illo reiciendis molestiae nemo accusamus dolores officia esse officiis ad? Eius ipsum itaque cum vitae dolorum? Voluptas eveniet sunt omnis quisquam, iusto maiores blanditiis architecto, unde quo assumenda quos ea possimus sint dignissimos, ducimus at!
-					</p>
-					<p class='container__text'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo amet dolore accusantium aspernatur exercitationem blanditiis impedit sequi, consectetur provident, nesciunt quisquam sunt aliquam, dolorem ullam nulla praesentium deserunt fuga eum debitis neque ea. Culpa iusto obcaecati eveniet, ea est repellendus vero quos ipsum fugiat repudiandae labore magnam omnis animi!
-					</p>
+			<!--Gallery section-->
+			<article id='gallery' class='container'>
+				<!--<div class='container container__left container__left--product'></div>-->
+				<div id='container__swiper' class='container__swiper'>
+					<div class='container__swiper__slide start'>
+						<img class='container__swiper__slide__img' src='tmp\17-Gradient-Nails-That-Look-Incredible-Summer-16-720x548.jpg'/>
+					</div>
+					<div class='container__swiper__slide mid'>
+						<img class='container__swiper__slide__img' src='tmp\french-manicure-come-farla-casa.jpg'/>
+					</div>
+					<div class='container__swiper__slide end'>
+						<img class='container__swiper__slide__img' src='tmp\gettyimages-1172701835.png'/>
+					</div>
+					
 				</div>
 			</article>
 			
@@ -133,7 +148,7 @@
 				</div>
 				<div class='container container__right'>
 					<div class='icon icon--address'></div>
-					<p class='container__text container__text--motto'>Weteringschans 143,	1017SE Almere</p>
+					<p class='container__text container__text--motto'>A.D. van Eckstraat 72, 1333KL Almere</p>
 					<a href='tel:+3161111999' class='icon icon--tel'></a>
 					<a href='tel:+3161111999'  class='container__text container__text--motto'>+3161111999</a>
 					<a href='mailto:emmol@windowslive.com' class='icon icon--email'></a>

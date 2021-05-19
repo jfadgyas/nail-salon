@@ -1,7 +1,7 @@
 // Variables
 const hamburger = document.querySelector('.hamburger')
-const menu = document.querySelector('.menu')
 const langSelector = document.querySelector('#lang-selector')
+let menu = document.querySelector(`#menu-${langSelector.value}`)
 const pageContent = Array.from(document.querySelectorAll('article'))
 const options = {
     root: null,
@@ -35,6 +35,7 @@ document.addEventListener('click', function closeMenu(e){
 
 langSelector.addEventListener('change', function changeLang() {
     document.documentElement.setAttribute('lang', langSelector.value)
+    menu = document.querySelector(`#menu-${langSelector.value}`)
 })
 
 pageContent.map(function(item){
