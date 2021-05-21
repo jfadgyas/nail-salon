@@ -63,12 +63,12 @@ const swipeEnd = e => {
     }
 }
 
-// const swipe = e => {
-//     // e.preventDefault()
-//     console.log('move')
-//     // console.log(e)
-//     gallery.style.background = 'aqua'
-// }
+const swipe = e => {
+    // e.preventDefault()
+    console.log('move')
+    // console.log(e)
+    // gallery.style.background = 'aqua'
+}
 
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
@@ -78,6 +78,6 @@ document.querySelector('#right').addEventListener('click', () => scroll('previou
 // gallery.addEventListener('mouseup', swipeEnd)
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)
-// gallery.addEventListener('touchmove', swipe)
+gallery.addEventListener('touchmove', swipe)
 
 getImages()
