@@ -30,32 +30,40 @@ const showImages = () => {
 }
 
 // Slide cards
-const scroll = (direction) => {
-    console.log(direction)
-    if (direction == 'left'){
-        const currentImage = gallery.querySelector('.pos-1')
-        if (currentImage.nextElementSibling){
-            currentImage.classList.add('pos-0')
-            currentImage.classList.remove('pos-1')
-            currentImage.style.zIndex = currentImage.getAttribute('data-pos-0')
-            currentImage.nextElementSibling.classList.add('pos-1')
-            currentImage.nextElementSibling.classList.remove('pos-2')
-        }
+const scroll = (nextImage, nextPos) => {
+    const currentImage = gallery.querySelector('.pos-1')
+    if (currentImage[nextImage]){
+        currentImage.classList.add(`pos-${nextPos+1}`)
+        currentImage.classList.remove('pos-1')
+        currentImage.style.zIndex = currentImage.getAttribute(`data-pos-${nextPos+1}`)
+        currentImage[nextImage].classList.add('pos-1')
+        currentImage[nextImage].classList.remove(`pos-${1-nextPos}`)
     }
-    if (direction == 'right') {
-        const currentImage = gallery.querySelector('.pos-1')
-        if (currentImage.previousElementSibling){
-            currentImage.classList.add('pos-2')
-            currentImage.classList.remove('pos-1')
-            currentImage.style.zIndex = currentImage.getAttribute('data-pos-2')//`-${zPosition}`
-            currentImage.previousElementSibling.classList.add('pos-1')
-            currentImage.previousElementSibling.classList.remove('pos-0')
-        }
-    }
+
+    // if (direction == 'left'){
+    //     const currentImage = gallery.querySelector('.pos-1')
+    //     if (currentImage.nextElementSibling){
+    //         currentImage.classList.add('pos-0')
+    //         currentImage.classList.remove('pos-1')
+    //         currentImage.style.zIndex = currentImage.getAttribute('data-pos-0')
+    //         currentImage.nextElementSibling.classList.add('pos-1')
+    //         currentImage.nextElementSibling.classList.remove('pos-2')
+    //     }
+    // }
+    // if (direction == 'right') {
+    //     const currentImage = gallery.querySelector('.pos-1')
+    //     if (currentImage.previousElementSibling){
+    //         currentImage.classList.add('pos-2')
+    //         currentImage.classList.remove('pos-1')
+    //         currentImage.style.zIndex = currentImage.getAttribute('data-pos-2')//`-${zPosition}`
+    //         currentImage.previousElementSibling.classList.add('pos-1')
+    //         currentImage.previousElementSibling.classList.remove('pos-0')
+    //     }
+    // }
 }
 
 // Listeners
-document.querySelector('#left').addEventListener('click', e => scroll(e.target.id))
-document.querySelector('#right').addEventListener('click', e => scroll(e.target.id))
+document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
+document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
 
 getImages()
