@@ -47,28 +47,28 @@ const swipeStart = e => {
     // e.preventDefault()
     console.log('start')
     console.log(e)
-    // swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
+    swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
 }
 
 const swipeEnd = e => {
     // e.preventDefault()
     console.log('end')
     console.log(e)
-    // const swipeEndPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
-    // if (swipeEndPos < swipeStartPos - 100){
-    //     scroll('nextElementSibling', -1)
-    // }
-    // if (swipeEndPos > swipeStartPos + 100){
-    //     scroll('previousElementSibling', 1)
-    // }
+    const swipeEndPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
+    if (swipeEndPos < swipeStartPos - 100){
+        scroll('nextElementSibling', -1)
+    }
+    if (swipeEndPos > swipeStartPos + 100){
+        scroll('previousElementSibling', 1)
+    }
 }
 
-const swipe = e => {
-    // e.preventDefault()
-    console.log('move')
-    // console.log(e)
-    gallery.style.background = 'aqua'
-}
+// const swipe = e => {
+//     // e.preventDefault()
+//     console.log('move')
+//     // console.log(e)
+//     gallery.style.background = 'aqua'
+// }
 
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
