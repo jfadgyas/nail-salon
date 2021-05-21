@@ -255,21 +255,22 @@ a {
   height: 100%;
 }
 
-.container__swiper__slide.start {
+.container__swiper__slide.pos-0 {
   top: 2em;
   left: 0;
   width: 25%;
   height: 50%;
 }
 
-.container__swiper__slide.mid {
+.container__swiper__slide.pos-1 {
   top: 0;
   left: 25%;
   width: 50%;
   height: 60%;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
 }
 
-.container__swiper__slide.end {
+.container__swiper__slide.pos-2 {
   top: 2em;
   left: 75%;
   width: 25%;
