@@ -67,7 +67,7 @@ const swipe = e => {
     // e.preventDefault()
     console.log('move')
     // console.log(e)
-    gallery.style.background = 'aqua'
+    gallery.style.background = 'rgba(0,0,0,0.5)'
 }
 
 // Listeners
