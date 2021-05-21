@@ -57,3 +57,5 @@ const scroll = (direction) => {
 // Listeners
 document.querySelector('#left').addEventListener('click', e => scroll(e.target.id))
 document.querySelector('#right').addEventListener('click', e => scroll(e.target.id))
+
+getImages()
