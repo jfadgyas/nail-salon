@@ -44,14 +44,14 @@ const scroll = (nextImage, nextPos) => {
 
 // Swiper functions: start, move, end
 const swipeStart = e => {
-    e.preventDefault()
+    // e.preventDefault()
     console.log('start')
     console.log(e)
     // swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
 }
 
 const swipeEnd = e => {
-    e.preventDefault()
+    // e.preventDefault()
     console.log('end')
     console.log(e)
     // const swipeEndPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
@@ -64,10 +64,10 @@ const swipeEnd = e => {
 }
 
 const swipe = e => {
-    e.preventDefault()
+    // e.preventDefault()
     console.log('move')
     // console.log(e)
-    gallery.style.background = 'red'
+    gallery.style.background = 'aqua'
 }
 
 // Listeners
