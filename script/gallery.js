@@ -54,7 +54,7 @@ const swipeEnd = e => {
     // e.preventDefault()
     console.log('end')
     console.log(e)
-    const swipeEndPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
+    const swipeEndPos = e.type.includes('touch') ? e.changedTouches[0].clientX : e.pageX
     if (swipeEndPos < swipeStartPos - 100){
         scroll('nextElementSibling', -1)
     }
@@ -63,21 +63,23 @@ const swipeEnd = e => {
     }
 }
 
-const swipe = e => {
-    // e.preventDefault()
-    console.log('move')
-    // console.log(e)
-    gallery.style.background = 'rgba(0,0,0,0.5)'
-}
+// const swipe = e => {
+//     // e.preventDefault()
+//     console.log('move')
+//     // console.log(e)
+//     gallery.style.background = 'rgba(0,0,0,0.5)'
+// }
 
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
 document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
 
-// gallery.addEventListener('mousedown', swipeStart)
-// gallery.addEventListener('mouseup', swipeEnd)
+gallery.addEventListener('dragstart', e => e.preventDefault())
+
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)
-gallery.addEventListener('touchmove', swipe)
+// gallery.addEventListener('touchmove', swipe)
+gallery.addEventListener('mousedown', swipeStart)
+gallery.addEventListener('mouseup', swipeEnd)
 
 getImages()
