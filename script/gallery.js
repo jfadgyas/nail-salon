@@ -78,6 +78,6 @@ document.querySelector('#right').addEventListener('click', () => scroll('previou
 // gallery.addEventListener('mouseup', swipeEnd)
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)
-gallery.addEventListener('touchmove', swipe)
+// gallery.addEventListener('touchmove', swipe)
 
 getImages()
