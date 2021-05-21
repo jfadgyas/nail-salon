@@ -1,6 +1,7 @@
 // Variables
 const gallery = document.querySelector('#container__swiper')
 let images
+let swipeStartPos
 
 // Functions
 // Get images (from db?, filter categories?)
@@ -39,31 +40,38 @@ const scroll = (nextImage, nextPos) => {
         currentImage[nextImage].classList.add('pos-1')
         currentImage[nextImage].classList.remove(`pos-${1-nextPos}`)
     }
-
-    // if (direction == 'left'){
-    //     const currentImage = gallery.querySelector('.pos-1')
-    //     if (currentImage.nextElementSibling){
-    //         currentImage.classList.add('pos-0')
-    //         currentImage.classList.remove('pos-1')
-    //         currentImage.style.zIndex = currentImage.getAttribute('data-pos-0')
-    //         currentImage.nextElementSibling.classList.add('pos-1')
-    //         currentImage.nextElementSibling.classList.remove('pos-2')
-    //     }
-    // }
-    // if (direction == 'right') {
-    //     const currentImage = gallery.querySelector('.pos-1')
-    //     if (currentImage.previousElementSibling){
-    //         currentImage.classList.add('pos-2')
-    //         currentImage.classList.remove('pos-1')
-    //         currentImage.style.zIndex = currentImage.getAttribute('data-pos-2')//`-${zPosition}`
-    //         currentImage.previousElementSibling.classList.add('pos-1')
-    //         currentImage.previousElementSibling.classList.remove('pos-0')
-    //     }
-    // }
 }
+
+// Swiper functions: start, move, end
+const swipeStart = e => {
+    console.log('start')
+    console.log(e)
+    swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
+}
+
+const swipeEnd = e => {
+    console.log(e)
+    const swipeEndPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
+    if (swipeEndPos < swipeStartPos - 100){
+        scroll('nextElementSibling', -1)
+    }
+    if (swipeEndPos > swipeStartPos + 100){
+        scroll('previousElementSibling', 1)
+    }
+}
+
+// const swipe = () => {
+//     console.log('move')
+// }
 
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
 document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
+
+gallery.addEventListener('mousedown', swipeStart)
+gallery.addEventListener('mouseup', swipeEnd)
+// gallery.addEventListener('mousemove', () => swipe()) // kellez?
+gallery.addEventListener('touchstart', swipeStart)
+gallery.addEventListener('touchend', swipeEnd)
 
 getImages()
