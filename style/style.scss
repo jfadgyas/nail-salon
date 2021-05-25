@@ -68,47 +68,57 @@ a{
             text-align: center;
         }
     }
-    &__swiper{
-        // background: aqua;
-        position: relative;
-        margin-top: 4em;
+    &__gallery{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 80vh;        
-        &__reflection{
-            position: absolute;
-            top: 40%;
-            width: 100%;
-            height: 80vh;
-            background: element(#container__swiper) no-repeat;
-            // transform: scaleY(-1);
-            // background: red;
+        height: 80vh;
+        &__wrapper{
+            height: 100%;
+            overflow: hidden;
         }
-        &__slide{
-            position: absolute;
-            transition: 0.5s;
-            &__img{
-                width: 100%;
-                height: 100%;
+        &__swiper{
+            position: relative;
+            height: 100%;      
+            &__slide{
+                position: absolute;
+                transition: 0.5s;
+                &__img{
+                    width: 100%;
+                    height: 85%;
+                }
+                &.pos-0{
+                    top: 2em;
+                    left: 0;
+                    width: 25%;
+                    height: 100%;
+                }
+                &.pos-1{
+                    top: 0;
+                    left: 25%;
+                    width: 50%;
+                    height: 100%;
+                }
+                &.pos-2{
+                    top: 2em;
+                    left: 75%;
+                    width: 25%;
+                    height: 100%;
+                }
             }
-            &.pos-0{
-                top: 2em;
-                left: 0;
-                width: 25%;
-                height: 50%;
-            }
-            &.pos-1{
-                top: 0;
-                left: 25%;
-                width: 50%;
-                height: 60%;
-                // -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
-            }
-            &.pos-2{
-                top: 2em;
-                left: 75%;
-                width: 25%;
-                height: 50%;
-            }
+        }
+        &__reflection{
+            width: 100%;
+            height: 50%;
+            z-index: -9999;
+            background: 
+                linear-gradient(to top, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 1)),
+                -moz-element(#container__gallery__swiper);
+            background-position: bottom;
+            background-size: cover;
+            transform: scaleY(-1);
+            opacity: 0.6;
+            // -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
         }
     }
     &__logo{

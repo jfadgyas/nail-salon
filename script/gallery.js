@@ -1,5 +1,5 @@
 // Variables
-const gallery = document.querySelector('#container__swiper')
+const gallery = document.querySelector('#container__gallery__swiper')
 let images
 let swipeStartPos
 
@@ -17,12 +17,12 @@ const showImages = () => {
     images.map((image, index) => {
             gallery.insertAdjacentHTML('afterbegin', 
             `<div
-                class='container__swiper__slide pos-2'
+                class='container__gallery__swiper__slide pos-2'
                 data-pos-0=${-index}
                 data-pos-2=${index-images.length}
                 style='z-index: ${index-images.length}'>
                 <p>${index}${image.text}</p>
-                <img class='container__swiper__slide__img' src=${image.src}></img>
+                <img class='container__gallery__swiper__slide__img' src=${image.src}></img>
             </div>`            
         )
     })
@@ -44,20 +44,16 @@ const scroll = (nextImage, nextPos) => {
 
 // Swiper functions: start, move, end
 const swipeStart = e => {
-    e.preventDefault()
-    console.log('start')
-    console.log(e)
+    // e.preventDefault()
     swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
 }
 
 const swipeEnd = e => {
-    console.log('end')
-    console.log(e)
     const swipeEndPos = e.type.includes('touch') ? e.changedTouches[0].clientX : e.pageX
-    if (swipeEndPos < swipeStartPos - 100){
+    if (swipeEndPos < swipeStartPos - 50){
         scroll('nextElementSibling', -1)
     }
-    if (swipeEndPos > swipeStartPos + 100){
+    if (swipeEndPos > swipeStartPos + 50){
         scroll('previousElementSibling', 1)
     }
 }
@@ -70,8 +66,8 @@ const swipeEnd = e => {
 // }
 
 // Listeners
-document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
-document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
+// document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
+// document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
 
 // gallery.addEventListener('dragstart', e => e.preventDefault())
 
