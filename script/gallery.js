@@ -21,8 +21,8 @@ const showImages = () => {
                 data-pos-0=${-index}
                 data-pos-2=${index-images.length}
                 style='z-index: ${index-images.length}'>
-                <img class='container__swiper__slide__img' src=${image.src}></img>
                 <p>${index}${image.text}</p>
+                <img class='container__swiper__slide__img' src=${image.src}></img>
             </div>`            
         )
     })
@@ -51,7 +51,6 @@ const swipeStart = e => {
 }
 
 const swipeEnd = e => {
-    // e.preventDefault()
     console.log('end')
     console.log(e)
     const swipeEndPos = e.type.includes('touch') ? e.changedTouches[0].clientX : e.pageX
@@ -74,7 +73,7 @@ const swipeEnd = e => {
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
 document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
 
-gallery.addEventListener('dragstart', e => e.preventDefault())
+// gallery.addEventListener('dragstart', e => e.preventDefault())
 
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)

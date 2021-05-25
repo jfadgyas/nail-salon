@@ -174,6 +174,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .container__left {
@@ -242,6 +244,17 @@ a {
   margin-top: 4em;
   width: 100%;
   height: 80vh;
+}
+
+.container__swiper__reflection {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 80vh;
+  background: -moz-element(#container__swiper) no-repeat;
+  background: element(#container__swiper) no-repeat;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 
 .container__swiper__slide {
