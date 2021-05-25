@@ -253,8 +253,6 @@ a {
   height: 80vh;
   background: -moz-element(#container__swiper) no-repeat;
   background: element(#container__swiper) no-repeat;
-  -webkit-transform: scaleY(-1);
-          transform: scaleY(-1);
 }
 
 .container__swiper__slide {
