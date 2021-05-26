@@ -73,6 +73,11 @@ a{
         flex-direction: column;
         width: 100%;
         height: 80vh;
+        &__header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         &__swiper{
             height: 100%;
             position: relative;
@@ -80,7 +85,7 @@ a{
             &__slide{
                 position: absolute;
                 background: black;
-                transition: 0.5s;
+                transition: 0.5s, z-index 0.1s;
                 &__img{
                     width: 100%;
                     height: 300px;
@@ -254,6 +259,18 @@ a{
     &--msg{
         &::before{
             content: '\f0e0';
+        }
+    }
+    &--swipe-left{
+        margin-top: 1em;
+        &::before{
+            content: '\f100';
+        }
+    }
+    &--swipe-right{
+        margin-top: 1em;
+        &::before{
+            content: '\f101';
         }
     }
 }

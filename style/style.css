@@ -251,6 +251,18 @@ a {
   height: 80vh;
 }
 
+.container__gallery__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container__gallery__swiper {
   height: 100%;
   position: relative;
@@ -260,8 +272,8 @@ a {
 .container__gallery__swiper__slide {
   position: absolute;
   background: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s, z-index 0.1s;
+  transition: 0.5s, z-index 0.1s;
 }
 
 .container__gallery__swiper__slide__img {
@@ -466,6 +478,22 @@ a {
 
 .icon--msg::before {
   content: '\f0e0';
+}
+
+.icon--swipe-left {
+  margin-top: 1em;
+}
+
+.icon--swipe-left::before {
+  content: '\f100';
+}
+
+.icon--swipe-right {
+  margin-top: 1em;
+}
+
+.icon--swipe-right::before {
+  content: '\f101';
 }
 
 .divider {

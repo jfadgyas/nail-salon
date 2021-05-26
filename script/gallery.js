@@ -8,19 +8,18 @@ let swipeStartPos
 const getImages = async () => {
     images = await fetch('../data/gallery.json')
         .then(response => response.json())
-    console.log(images)
     showImages()
 }
 
-// Bring images to view, LIFO
+// Bring images to view
 const showImages = () => {
     images.map((image, index) => {
             gallery.insertAdjacentHTML('afterbegin', 
             `<div
                 class='container__gallery__swiper__slide pos-2'
                 data-pos-0=${-index}
-                data-pos-2=${index-images.length}
-                style='z-index: ${index-images.length}'>
+                data-pos-2=${index-images.length+1}
+                style='z-index: ${index-images.length+1}'>
                 <p>${index}${image.text}</p>
                 <img class='container__gallery__swiper__slide__img' src=${image.src}></img>
                 <div class='container__gallery__swiper__slide__reflection'>
@@ -47,7 +46,7 @@ const scroll = (nextImage, nextPos) => {
 
 // Swiper functions: start, move, end
 const swipeStart = e => {
-    // e.preventDefault()
+    e.preventDefault()
     swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
 }
 
@@ -61,22 +60,11 @@ const swipeEnd = e => {
     }
 }
 
-// const swipe = e => {
-//     // e.preventDefault()
-//     console.log('move')
-//     // console.log(e)
-//     gallery.style.background = 'rgba(0,0,0,0.5)'
-// }
-
 // Listeners
-// document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
-// document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
-
-// gallery.addEventListener('dragstart', e => e.preventDefault())
-
+document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
+document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)
-// gallery.addEventListener('touchmove', swipe)
 gallery.addEventListener('mousedown', swipeStart)
 gallery.addEventListener('mouseup', swipeEnd)
 
