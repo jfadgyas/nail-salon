@@ -51,6 +51,7 @@ const swipeStart = e => {
 }
 
 const swipeEnd = e => {
+    e.preventDefault()
     const swipeEndPos = e.type.includes('touch') ? e.changedTouches[0].clientX : e.pageX
     if (swipeEndPos < swipeStartPos - 50){
         scroll('nextElementSibling', -1)
@@ -63,9 +64,9 @@ const swipeEnd = e => {
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
 document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
-// gallery.addEventListener('touchstart', swipeStart)
-// gallery.addEventListener('touchend', swipeEnd)
-// gallery.addEventListener('mousedown', swipeStart)
-// gallery.addEventListener('mouseup', swipeEnd)
+gallery.addEventListener('touchstart', swipeStart)
+gallery.addEventListener('touchend', swipeEnd)
+gallery.addEventListener('mousedown', swipeStart)
+gallery.addEventListener('mouseup', swipeEnd)
 
 getImages()

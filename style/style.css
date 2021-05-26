@@ -265,7 +265,7 @@ a {
 .container__gallery__swiper {
   height: 80vh;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .container__gallery__swiper__slide {
