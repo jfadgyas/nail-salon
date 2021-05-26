@@ -44,7 +44,7 @@ const scroll = (nextImage, nextPos) => {
     }
 }
 
-// Swiper functions: start, move, end
+// Swiper functions: start, end
 const swipeStart = e => {
     // e.preventDefault()
     swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
@@ -63,7 +63,6 @@ const swipeEnd = e => {
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
 document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
-// gallery.addEventListener('dragstart', e => e.preventDefault())
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)
 gallery.addEventListener('mousedown', swipeStart)
