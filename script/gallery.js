@@ -23,7 +23,7 @@ const showImages = () => {
                 style='z-index: ${index-images.length}'>
                 <p>${index}${image.text}</p>
                 <img class='container__gallery__swiper__slide__img' src=${image.src}></img>
-                <div class='container__gallery__reflection'>
+                <div class='container__gallery__swiper__slide__reflection'>
                     <img class='container__gallery__swiper__slide__img' src=${image.src}></img>
                 </div>
             </div>`            
