@@ -50,8 +50,8 @@ const swipeStart = e => {
     swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
 }
 
-const swipe = () => {
-
+const swipe = e => {
+    e.preventDefault()
 }
 
 const swipeEnd = e => {
