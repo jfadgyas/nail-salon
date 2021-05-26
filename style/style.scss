@@ -82,7 +82,7 @@ a{
             height: 100%;
             position: relative;
             overflow: hidden;
-            overflow-anchor: none;
+            overflow-anchor: auto;
             &__slide{
                 position: absolute;
                 background: black;

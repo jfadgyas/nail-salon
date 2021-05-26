@@ -267,7 +267,7 @@ a {
   height: 100%;
   position: relative;
   overflow: hidden;
-  overflow-anchor: none;
+  overflow-anchor: auto;
 }
 
 .container__gallery__swiper__slide {
