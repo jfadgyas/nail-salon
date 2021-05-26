@@ -63,10 +63,7 @@ const swipeEnd = e => {
 // Listeners
 document.querySelector('#left').addEventListener('click', () => scroll('nextElementSibling', -1))
 document.querySelector('#right').addEventListener('click', () => scroll('previousElementSibling', 1))
-document.addEventListener('dragstart', e => {
-    e.preventDefault()
-    e.stopPropagation()
-})
+// gallery.addEventListener('dragstart', e => e.preventDefault())
 gallery.addEventListener('touchstart', swipeStart)
 gallery.addEventListener('touchend', swipeEnd)
 gallery.addEventListener('mousedown', swipeStart)

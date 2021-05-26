@@ -271,6 +271,7 @@ a {
 .container__gallery__swiper__slide {
   position: absolute;
   background: black;
+  pointer-events: none;
   -webkit-transition: 0.5s, z-index 0.1s;
   transition: 0.5s, z-index 0.1s;
 }

@@ -84,6 +84,7 @@ a{
             &__slide{
                 position: absolute;
                 background: black;
+                pointer-events: none;
                 transition: 0.5s, z-index 0.1s;
                 &__img{
                     width: 100%;
