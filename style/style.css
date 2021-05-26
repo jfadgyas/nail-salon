@@ -273,6 +273,10 @@ a {
   top: 0;
   left: 0;
   width: 25%;
+  -webkit-transform: rotateY(40deg) skewY(15deg);
+          transform: rotateY(40deg) skewY(15deg);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 .container__gallery__swiper__slide.pos-1 {
@@ -285,6 +289,10 @@ a {
   top: 0;
   left: 75%;
   width: 25%;
+  -webkit-transform: rotateY(40deg) skewY(-15deg);
+          transform: rotateY(40deg) skewY(-15deg);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 .container__gallery__swiper__slide__reflection {
