@@ -78,9 +78,9 @@ a{
             align-items: center;
         }
         &__swiper{
-            height: 60vh;//80vh;
+            height: 80vh;
             position: relative;
-            overflow: hidden;
+            // overflow: hidden;
             &__slide{
                 position: absolute;
                 background: black;
