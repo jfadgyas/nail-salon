@@ -263,7 +263,7 @@ a {
 }
 
 .container__gallery__swiper {
-  height: 80vh;
+  height: 60vh;
   position: relative;
   overflow: hidden;
 }
