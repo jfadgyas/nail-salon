@@ -7,6 +7,34 @@
         .container__photo{
             width: 35%;
         }
+        .container__gallery__swiper{
+            height: 100vh;
+            &__slide{
+                &__img{
+                    width: 100%;
+                    height: 300px;
+                }
+                &.pos-0{
+                    top: -2em;
+                    left: 0;
+                    width: 25%;
+                    transform: rotateY(40deg) skewY(15deg);
+                    filter: blur(3px);
+                }
+                &.pos-1{
+                    top: 0;
+                    left: 25%;
+                    width: 50%;
+                }
+                &.pos-2{
+                    top: -2em;
+                    left: 75%;
+                    width: 25%;
+                    transform: rotateY(40deg) skewY(-15deg);
+                    filter: blur(3px);
+                }
+            }
+        }
     }
 
 // iphone 6/7/8 Plus ios11
