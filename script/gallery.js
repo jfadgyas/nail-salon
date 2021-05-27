@@ -46,7 +46,6 @@ const scroll = (nextImage, nextPos) => {
 
 // Swiper functions: start, end
 const swipeStart = e => {
-    // e.preventDefault()
     swipeStartPos = e.type.includes('touch') ? e.touches[0].clientX : e.pageX
 }
 

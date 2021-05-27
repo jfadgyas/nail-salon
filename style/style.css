@@ -283,7 +283,7 @@ a {
 
 .container__gallery__swiper__slide.pos-0 {
   top: 0;
-  left: 0;
+  left: -100%;
   width: 25%;
   -webkit-transform: rotateY(40deg) skewY(15deg);
           transform: rotateY(40deg) skewY(15deg);
@@ -293,13 +293,13 @@ a {
 
 .container__gallery__swiper__slide.pos-1 {
   top: 2em;
-  left: 25%;
-  width: 50%;
+  left: 0;
+  width: 100%;
 }
 
 .container__gallery__swiper__slide.pos-2 {
   top: 0;
-  left: 75%;
+  left: 100%;
   width: 25%;
   -webkit-transform: rotateY(40deg) skewY(-15deg);
           transform: rotateY(40deg) skewY(-15deg);
