@@ -1,8 +1,8 @@
-// iphone 6/7/8 ios11
+//general mobile screen
 //landscape
 @media only screen
     and (min-width: 667px)
-    and (max-height: 375px)
+    and (max-height: 414px)
     and (min-resolution: 2dppx){
         .container__photo{
             width: 35%;
@@ -37,11 +37,24 @@
         }
     }
 
+
+
+// iphone 6/7/8 ios11
+//landscape
+@media only screen
+    and (min-width: 667px)
+    and (max-height: 375px)
+    and (min-resolution: 2dppx){
+        .container__photo{
+            width: 35%;
+        }
+    }
+
 // iphone 6/7/8 Plus ios11
 // landscape
 @media only screen
     and (min-width: 736px)
-    and (min-height: 414px)
+    and (max-height: 414px)
     and (min-resolution: 2dppx){
         .container__photo{
             width: 42%;
