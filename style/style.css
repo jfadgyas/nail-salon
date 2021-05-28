@@ -555,6 +555,31 @@ a {
   .container__text {
     margin: 0 1em;
   }
+  .container__gallery {
+    padding-top: 3em;
+  }
+  .container__gallery__swiper {
+    height: 60vh;
+  }
+  .container__gallery__swiper__slide__img {
+    width: 100%;
+    height: 400px;
+  }
+  .container__gallery__swiper__slide.pos-0 {
+    top: 0;
+    left: 0;
+    width: 25%;
+  }
+  .container__gallery__swiper__slide.pos-1 {
+    top: 2em;
+    left: 25%;
+    width: 50%;
+  }
+  .container__gallery__swiper__slide.pos-2 {
+    top: 0;
+    left: 75%;
+    width: 25%;
+  }
   .footer {
     margin-top: 20%;
   }
@@ -582,6 +607,18 @@ a {
   }
 }
 
+@media only screen and (min-width: 1025px) and (min-height: 768px) {
+  .container__gallery__swiper__slide.pos-0 {
+    top: -0.5em;
+  }
+  .container__gallery__swiper__slide.pos-1 {
+    top: 2em;
+  }
+  .container__gallery__swiper__slide.pos-2 {
+    top: -0.5em;
+  }
+}
+
 @media only screen and (min-width: 1280px) and (min-height: 720px) {
   .container__logo {
     width: calc(50vw - 60%);
@@ -594,6 +631,15 @@ a {
   }
   .container__right__price-cards {
     padding-top: 2em;
+  }
+  .container__gallery__swiper__slide.pos-0 {
+    top: -1em;
+  }
+  .container__gallery__swiper__slide.pos-1 {
+    top: 2em;
+  }
+  .container__gallery__swiper__slide.pos-2 {
+    top: -1em;
   }
 }
 
@@ -611,11 +657,6 @@ a {
   .container__gallery__swiper__slide.pos-0 {
     top: -2em;
     left: 0;
-    width: 25%;
-    -webkit-transform: rotateY(40deg) skewY(15deg);
-            transform: rotateY(40deg) skewY(15deg);
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
   }
   .container__gallery__swiper__slide.pos-1 {
     top: 0;
@@ -625,11 +666,6 @@ a {
   .container__gallery__swiper__slide.pos-2 {
     top: -2em;
     left: 75%;
-    width: 25%;
-    -webkit-transform: rotateY(40deg) skewY(-15deg);
-            transform: rotateY(40deg) skewY(-15deg);
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
   }
 }
 
@@ -660,6 +696,9 @@ a {
 @media only screen and (min-width: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
   .container__photo {
     width: 25%;
+  }
+  .container__gallery__swiper {
+    height: 80vh;
   }
   .btn {
     display: none;

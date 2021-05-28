@@ -92,19 +92,19 @@ a{
                 }
                 &.pos-0{
                     top: 0;
-                    left: -100%;//25%;
+                    left: -100%;
                     width: 25%;
                     transform: rotateY(40deg) skewY(15deg);
                     filter: blur(3px);
                 }
                 &.pos-1{
                     top: 2em;
-                    left: 0%;//25%;
-                    width: 100%;//50%;
+                    left: 0%;
+                    width: 100%;
                 }
                 &.pos-2{
                     top: 0;
-                    left: 100%;//75%;
+                    left: 100%;
                     width: 25%;
                     transform: rotateY(40deg) skewY(-15deg);
                     filter: blur(3px);
